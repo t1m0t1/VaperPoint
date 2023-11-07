@@ -273,6 +273,12 @@ body {
     visibility: visible;
   }
   
+  .vapor{
+    background-image: url("../img/humo3.png");
+    background-size: cover;
+    background-position: center;
+  }
+
   @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
       left: -90%;
@@ -312,7 +318,10 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    /* background: rgba(0, 0, 0, 0.9); */
+    background-image: url("../img/humo3.png");
+    background-size: cover;
+    background-position: center;
     transition: 0.3s;
     z-index: 999;
   }

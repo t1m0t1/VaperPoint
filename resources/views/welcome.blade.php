@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Vaper Point | Home</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,12 +17,12 @@
     <body>
 
       <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center justify-content-lg-between">
+        <div class="container d-flex align-items-center justify-content-lg-between vapor">
 
           <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Vaper<span>Point</span></a></h1> -->
           <!-- Uncomment below if you prefer to use an image logo -->
           <a href="/" class="logo me-auto me-lg-0"><img src="./img/logo-fondo-png.png" alt="" class="img-fluid"></a>
-
+ 
           <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
               <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -76,7 +76,7 @@
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
-          <h1>Tienta de <span>Vapeo</span></h1>
+          <h1>Tienda de <span>Vapeo</span></h1>
           <h2>Un mundo libre de humo</h2>
         </div>
       </div>
