@@ -12,7 +12,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::all();
+        return view('configuraciones.productos.listar', ['productos' => $productos]);
     }
 
     /**
