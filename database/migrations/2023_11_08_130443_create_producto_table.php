@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('Nombre', 100);
             $table->bigInteger('Cantidad');
             $table->text('Descripcion');
+            $table->string('Imagen');
             $table->foreignId('CategotiaID')->references('CategoriaID')->on('categoria');
             $table->timestamps();
         });
