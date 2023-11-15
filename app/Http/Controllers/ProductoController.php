@@ -14,7 +14,7 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::all();
-        return view('configuraciones.productos.listar', ['productos' => $productos]);
+        return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
     }
 
     /**
@@ -23,7 +23,7 @@ class ProductoController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-        return view('configuraciones.productos.alta', ['categorias'=>$categorias]);
+        return view('configuracion.producto.producto.productoAlta', ['categorias'=>$categorias]);
     }
 
     /**
