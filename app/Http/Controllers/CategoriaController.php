@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('configuraciones.categorias.alta');
     }
 
     /**
@@ -29,7 +29,8 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Categoria::create($request -> all());
+        return redirect()->route('categoriaIndex');
     }
 
     /**
