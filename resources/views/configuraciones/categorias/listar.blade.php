@@ -1,27 +1,38 @@
 @extends('configuraciones.layout.app')
 
 @section('contenido')
-    <div class="container m-3">
-        <h1>CATEGORIAS</h1>
+    <div class="container m-8">
+        <h1 class="text-center fw-bold">CATEGORIAS</h1>
 
-        <button type="button" class="btn btn-primary"> <i class="bi bi-plus-square-fill"> Nuevo</i></button>
+       
+        <a class="btn btn-primary bi bi-plus-square-fill" href="{{route('categoriaCreate')}}">Nuevo Categoria</a>
 
     
 
         <table class="table table-hover">
-            <thead class="grid">
+            <thead>
             <tr>
-                <th scope="col-sm-2">#</th>
                 <th scope="col">Nombre</th>
+                <th scope="col">Acciones</th>
             </tr>
             </thead>
-            @forelse ($collection as $item)
-                <tbody>
-                
-                </tbody>
-            @empty
-                
-            @endforelse
+            <tbody>
+                @forelse ($categorias as $categoria)
+                <tr>
+                    <td>
+                        {{$categoria->Nombre}}
+                    </td>
+                    <td>
+                        <button class="btn btn-success bi bi-pencil-square"></button>
+                        <button class="btn btn-danger bi bi-x-square"></button>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td class="text-center fw-bold" colspan="2">SIN DATOS</td> 
+                </tr>    
+                @endforelse
+            </tbody>
             
         </table>
     </div>
