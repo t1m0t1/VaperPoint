@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id('ProductoID');
             $table->string('Nombre', 100);
             $table->bigInteger('Cantidad');
-            $table->text('Descripcion');
-            $table->foreignId('CategotiaID')->references('CategoriaID')->on('categoria');
+            $table->text('Descripcion')->nullable();
+            $table->string('Imagen')->nullable();
+            $table->float('Precio')->nullable();
+            $table->foreignId('categoriaID')->references('CategoriaID')->on('categoria');
             $table->timestamps();
         });
     }

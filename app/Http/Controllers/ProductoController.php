@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::all();
+        return view('configuraciones.productos.listar', ['productos' => $productos]);
     }
 
     /**
@@ -20,7 +22,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        $categorias = Categoria::all();
+        return view('configuraciones.productos.alta', ['categorias'=>$categorias]);
     }
 
     /**
@@ -28,7 +31,9 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Producto::create($request->all());
+        return redirect()->route('productoIndex');
+
     }
 
     /**
