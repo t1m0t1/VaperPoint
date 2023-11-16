@@ -29,7 +29,14 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        Categoria::create($request -> all());
+        $validated = $request->validate([
+            'Nombre' => 'required|unique:Categoria|max:100',
+        ]);
+
+        $categoria = new Categoria();
+        $categoria->Nombre = $validated['Nombre'];
+        $categoria->save();
+        
         return redirect()->route('categoriaIndex');
     }
 
@@ -44,24 +51,37 @@ class CategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categoria $categoria)
+    public function edit($categoriaID)
     {
-        //
+        $categoria = Categoria::find($categoriaID);
+
+        return view('configuracion.producto.categoria.categoriaModificar')->with(['categoria'=>$categoria]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categoria $categoria)
-    {
-        //
+    public function update(Request $request)
+    { 
+        $validated = $request->validate([
+            'Nombre' => 'required|unique:Categoria,Nombre,'.$request->CategoriaID.',CategoriaID|max:100',
+        ]);
+
+        $categoria = new Categoria();
+        $categoria->Nombre = $validated['Nombre'];
+        $categoria->save();
+        
+        return redirect()->route('categoriaIndex');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($categoriaID)
     {
-        //
+        $categoria = Categoria::find($categoriaID);
+        $categoria -> delete();
+        return redirect()->route('categoriaIndex');
     }
 }
