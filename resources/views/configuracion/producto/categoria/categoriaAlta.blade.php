@@ -7,8 +7,11 @@
         <form method="POST" action="{{route('categoriaStore')}}" class="row g-3 needs-validation" novalidate>
             @csrf
             <div class="col-md-4">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="Nombre" value="nombre" name="nombre" required>
+              <label for="Nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control @error('title') is-invalid @enderror" id="Nombre" value="{{ old ('Nombre')}}" name="Nombre" required>
+              @error('Nombre')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
               <div class="valid-feedback">
                 Looks good!
               </div>

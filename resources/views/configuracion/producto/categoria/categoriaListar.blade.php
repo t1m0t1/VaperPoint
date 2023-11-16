@@ -19,13 +19,19 @@
                             {{$categoria->Nombre}}
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-success">
+                            <a href="{{route('categoriaEdit' , ['CategoriaID' => $categoria->CategoriaID])}}" class="btn btn-success">
                                 Editar
-                            </button>
-                            <button class="btn btn-danger bi bi-x-square">
-                                Eliminar
-                            </button>
-                        </td>
+                            </a>
+                            
+                            <form action="{{route('categoriaDestroy' , ['CategoriaID' => $categoria->CategoriaID])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger bi bi-x-square">
+                                    Eliminar
+                                </button>
+                            </form>
+                                
+                            </td>
                     </tr>
                     @empty
                     <tr>
