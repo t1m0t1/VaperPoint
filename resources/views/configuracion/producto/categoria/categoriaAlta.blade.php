@@ -8,13 +8,10 @@
             @csrf
             <div class="col-md-4">
               <label for="Nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control @error('title') is-invalid @enderror" id="Nombre" value="{{ old ('Nombre')}}" name="Nombre" required>
+              <input type="text" class="form-control @error('Nombre') is-invalid @enderror" id="Nombre" value="{{ old ('Nombre')}}" name="Nombre">
               @error('Nombre')
                 <div class="alert alert-danger">{{ $message }}</div>
               @enderror
-              <div class="valid-feedback">
-                Looks good!
-              </div>
             </div>
 
             <div class="d-grid gap-2 d-md-block">
