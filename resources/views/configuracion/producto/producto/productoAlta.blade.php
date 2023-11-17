@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('contenido')
-    <div class="container-sm shadow-lg border mt-5">
+    <div class="container-sm bg-light shadow-lg border mt-5">
       <div class="row mb-3 bg-secondary">
         <h5 class="text-start text-light m-1">Alta de Producto</h5>
       </div>
