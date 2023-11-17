@@ -15,7 +15,8 @@
         <link href="{{asset('./css/style.css')}}" rel="stylesheet">
         <script src="{{asset('./js/jquery.js')}}"></script>
     </head>
-    <body class="bg-dark ">
+    <body style="background-image: url({{asset('./img/background.jpg')}});
+    background-size: cover;">
         <header id="header" class="fixed-top ">
                 <div class="container d-flex align-items-center justify-content-lg-between vapor">
         
