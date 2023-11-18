@@ -21,20 +21,26 @@
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="cantidad" class="form-label">Cantidad</label>
-                      <input type="number" class="form-control" id="cantidad" value="Cantidad" required name="cantidad" min="0">
+                      <label for="Cantidad" class="form-label">Cantidad</label>
+                      <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" >
+                      @error('Cantidad')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="precio" class="form-label">Precio</label>
-                      <input type="number" class="form-control" id="precio" value="Precio" min="0" name="precio">
+                      <label for="Precio" class="form-label">Precio</label>
+                      <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio">
+                      @error('Precio')
+                        <div class="alert alert-danger">{{ $message }}</div>    
+                      @enderror
                     </div>
                   </div>
     
                   <div class="input-group">
                     <div class="col-md-3">
                       <label for="CategoriaID" class="form-label">Categorias</label>
-                      <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID">
+                      <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()">
                         <option selected disabled value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
                         <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
@@ -60,8 +66,8 @@
   
                   <div class="input-group">
                     <div class="col-md-8">
-                      <label for="descripcion" class="form-label">Descripcion</label>
-                      <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                      <label for="Descripcion" class="form-label">Descripcion</label>
+                      <textarea class="form-control" id="descripcion" name="Descripcion"></textarea>
                     </div>
                   </div>
 
