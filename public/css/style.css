@@ -1,3 +1,9 @@
+.color1 {background-color: #120907;}
+.color2 {background-color: #1e2237;}
+.color3 {background-color: #56608a;}
+.color4 {background-color: #99a2e7;}
+.color5 {background-color: #dbe3ed;}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -198,7 +204,7 @@ body {
     padding: 10px 0 10px 30px;
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
+    color: #fff8f8;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -240,7 +246,7 @@ body {
     padding: 10px 20px;
     font-size: 14px;
     text-transform: none;
-    color: #151515;
+    color: #0a0909;
     font-weight: 400;
   }
   
