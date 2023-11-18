@@ -1,19 +1,19 @@
 @extends('layouts.default')
 
 @section('contenido')
-    <div class="container-sm bg-light shadow-lg border mt-5">
-      <div class="row mb-3 bg-secondary">
+    <div class="container-sm color2 shadow-lg border mt-5">
+      <div class="row mb-3 color3">
         <h5 class="text-start text-light m-1">Alta de Producto</h5>
       </div>
 
         <form method="POST" action="{{route('productoStore')}}">
             @csrf
             <div class="col-md-12 d-grid">
-              <div class="row">
+              <div class="row ms-5">
                 <div class="col-md-7">
-                  <div class="input-group">
+                  <div class="input-group mt-3">
                     <div class="col-md-4">
-                      <label for="Nombre" class="form-label">Nombre</label>
+                      <label for="Nombre" class="form-label text-light">Nombre</label>
                       <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre')}}" name="Nombre">
                       @error('Nombre')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -21,19 +21,19 @@
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="cantidad" class="form-label">Cantidad</label>
+                      <label for="cantidad" class="form-label text-light">Cantidad</label>
                       <input type="number" class="form-control" id="cantidad" value="Cantidad" required name="cantidad" min="0">
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="precio" class="form-label">Precio</label>
+                      <label for="precio" class="form-label text-light">Precio</label>
                       <input type="number" class="form-control" id="precio" value="Precio" min="0" name="precio">
                     </div>
                   </div>
     
-                  <div class="input-group">
+                  <div class="input-group mt-3">
                     <div class="col-md-3">
-                      <label for="CategoriaID" class="form-label">Categorias</label>
+                      <label for="CategoriaID" class="form-label text-light">Categorias</label>
                       <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID">
                         <option selected disabled value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
@@ -45,8 +45,8 @@
                       @enderror
                     </div>
     
-                    <div class="col-md-3 ms-4">
-                      <label for="Importado" class="form-label">Sub Categoria</label>
+                    <div class="col-md-3 ms-4 ">
+                      <label for="Importado" class="form-label text-light">Sub Categoria</label>
                       <select class="form-select @error('Importado') is-invalid @enderror" aria-label="Disabled select example" id="selectImportado" name="Importado" disabled>
                         <option selected>Solo liquidos</option>
                         <option value="0">Nacionales</option>
@@ -58,9 +58,9 @@
                     </div>
                   </div>
   
-                  <div class="input-group">
+                  <div class="input-group mt-3">
                     <div class="col-md-8">
-                      <label for="descripcion" class="form-label">Descripcion</label>
+                      <label for="descripcion" class="form-label text-light">Descripcion</label>
                       <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
                     </div>
                   </div>
