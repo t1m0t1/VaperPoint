@@ -33,9 +33,10 @@ class ProductoController extends Controller
     {
         $validated = $request->validate([
             'Nombre' => 'required|max:100|min:3',
-            'cantidad' => 'required|max:999',
+            'Cantidad' => 'required|max:3',
             'Precio' => 'required',
-            'CategoriaID' => 'required'
+            'CategoriaID' => 'required',
+            'Importado' => 'nullable'
         ]);
         $producto = new Producto();
         $producto->Nombre = $validated['Nombre'];

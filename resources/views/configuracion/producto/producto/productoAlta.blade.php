@@ -13,33 +13,33 @@
                 <div class="col-md-7">
                   <div class="input-group mt-3">
                     <div class="col-md-4">
-                      <label for="Nombre" class="form-label text-light">Nombre</label>
+                      <label for="Nombre" class="form-label text-light">Nombre <i class="bi bi-braces-asterisk"></i></label>
                       <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre')}}" name="Nombre">
                       @error('Nombre')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                      <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
     
-                    <div class="col-md-2 ms-4">
-                      <label for="Cantidad" class="form-label">Cantidad</label>
-                      <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" >
+                    <div class="col-md-3 ms-3">
+                      <label for="Cantidad" class="form-label text-light">Cantidad <i class="bi bi-braces-asterisk"></i></label>
+                      <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" name="Cantidad" min="0" >
                       @error('Cantidad')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                      <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
     
-                    <div class="col-md-2 ms-4">
-                      <label for="Precio" class="form-label">Precio</label>
+                    <div class="col-md-3 ms-3">
+                      <label for="Precio" class="form-label text-light">Precio <i class="bi bi-braces-asterisk"></i></label>
                       <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio">
                       @error('Precio')
-                        <div class="alert alert-danger">{{ $message }}</div>    
+                      <p class="text-danger">{{ $message }}</p>    
                       @enderror
                     </div>
                   </div>
     
-                  <div class="input-group mt-3">
+                  <div class="input-group mt-4">
                     <div class="col-md-3">
-                      <label for="CategoriaID" class="form-label">Categorias</label>
+                      <label for="CategoriaID" class="form-label text-light">Categorias <i class="bi bi-braces-asterisk"></i></label>
                       <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()">
                         <option selected disabled value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
@@ -47,7 +47,7 @@
                         @endforeach
                       </select>
                       @error('CategoriaID')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                        <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
     
@@ -58,14 +58,14 @@
                         <option value="0">Nacionales</option>
                         <option value="1">Importados</option>
                         </select>
-                        @error('CategoriaID')
-                          <div class="alert alert-danger">{{ $message }}</div>
+                        @error('Importado')
+                        <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
                   </div>
   
-                  <div class="input-group mt-3">
-                    <div class="col-md-8">
+                  <div class="input-group mt-4">
+                    <div class="col-md-10">
                       <label for="descripcion" class="form-label text-light">Descripcion</label>
                       <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
                     </div>
@@ -73,10 +73,10 @@
 
                 </div>
 
-                <div class="col-md-4 me-3">
+                <div class="col-md-4 me-3 mb-5">
                     <div class="col-md-12 border my-3 mx-auto">
                       <div class="col-md-9 my-3 mx-auto">
-                        <img src="{{asset('img/no-disponible.jpg')}}" class="img-thumbnail">
+                        <img src="{{asset('img/no-disponible.jpg')}}" class="mx-auto d-block">
                       </div>
                       <input class="form-control" type="file" id="formFile">
                     </div>
