@@ -31,7 +31,20 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        Producto::create($request->all());
+        $validated = $request->validate([
+            'Nombre' => 'required|max:100|min:3',
+            'cantidad' => 'required|max:999',
+            'Precio' => 'required',
+            'CategoriaID' => 'required'
+        ]);
+        $producto = new Producto();
+        $producto->Nombre = $validated['Nombre'];
+        $producto->Cantidad = $validated['Cantidad'];
+        $producto->Precio = $validated['Precio'];
+        $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->save();
+
+        /* Producto::create($request->all()); */
         return redirect()->route('productoIndex');
 
     }

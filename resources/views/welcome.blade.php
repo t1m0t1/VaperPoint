@@ -17,7 +17,7 @@
     </head>
     <body>
 
-      <header id="header" class="fixed-top ">
+      <header id="header" class="fixed-top color2">
         <div class="container d-flex align-items-center justify-content-lg-between vapor">
 
           <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Vaper<span>Point</span></a></h1> -->
@@ -72,7 +72,7 @@
     </header>
     <!-- End Header -->
 
-      <section id="hero" class="d-flex align-items-center justify-content-center">
+<section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">

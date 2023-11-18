@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('Descripcion')->nullable();
             $table->string('Imagen')->nullable();
             $table->float('Precio')->nullable();
+            $table->boolean('Importado')->nullable();
             $table->foreignId('categoriaID')->references('CategoriaID')->on('categoria');
             $table->timestamps();
         });
