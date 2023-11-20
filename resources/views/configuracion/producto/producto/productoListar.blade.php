@@ -14,6 +14,7 @@
       <table class="table table-bordered  table-primary table-hover">
           <thead class="grid">
           <tr class="text-center">
+              <th scope="col"></th>
               <th scope="col">Nombre</th>
               <th scope="col">Categoria</th>
               <th scope="col">Precio</th>
@@ -26,8 +27,12 @@
               
               @forelse ($productos as $producto)
                   <tr>
+                    <td class="text-center">
+                        @isset ($producto->Imagen)
+                            <img class="td-image" src="{{asset('./images/productos/'.$producto->Imagen)}}" alt="">
+                        @endisset
+                    </td>
                       <td class="text-center">
-                          <img src="" alt="">
                           {{$producto->Nombre}}
                       </td>
                       <td class="text-center">{{$producto->categoria->Nombre ?? "--"}}</td>

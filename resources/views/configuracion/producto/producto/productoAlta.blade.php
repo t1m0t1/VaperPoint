@@ -6,7 +6,7 @@
         <h5 class="text-start text-light m-1">Alta de Producto</h5>
       </div>
 
-        <form method="POST" action="{{route('productoStore')}}">
+        <form method="POST" enctype="multipart/form-data" action="{{route('productoStore')}}">
             @csrf
             <div class="col-md-12 d-grid">
               <div class="row ms-5">
@@ -78,7 +78,10 @@
                       <div class="col-md-9 my-3 mx-auto">
                         <img src="{{asset('img/no-disponible.jpg')}}" class="mx-auto d-block">
                       </div>
-                      <input class="form-control" type="file" id="formFile">
+                      <input class="form-control  @error('Imagen') is-invalid @enderror" type="file" id="formFile" name="Imagen">
+                      @error('Imagen')
+                        <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                 </div>
               </div>

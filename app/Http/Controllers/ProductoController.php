@@ -35,17 +35,25 @@ class ProductoController extends Controller
             'Nombre' => 'required|max:100|min:3',
             'Cantidad' => 'required|max:3',
             'Precio' => 'required',
+            'Descripcion' => 'nullable',
             'CategoriaID' => 'required',
-            'Importado' => 'nullable'
+            'Importado' => 'nullable',
+            'Imagen' => 'nullable|image'
         ]);
         $producto = new Producto();
         $producto->Nombre = $validated['Nombre'];
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
         $producto->CategoriaID = $validated['CategoriaID'];
+
+        if($request->hasFile("Imagen")){
+            $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
+            request()->Imagen->move(public_path('images/productos'), $fileName);
+            $producto->Imagen = $fileName;
+        }
+
         $producto->save();
 
-        /* Producto::create($request->all()); */
         return redirect()->route('productoIndex');
 
     }
@@ -63,7 +71,8 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        $categorias = Categoria::all();
+        return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]);
     }
 
     /**
