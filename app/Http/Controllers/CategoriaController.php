@@ -41,14 +41,6 @@ class CategoriaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Categoria $categoria)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit($categoriaID)
@@ -62,13 +54,13 @@ class CategoriaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update($CategoriaID,Request $request)
     { 
         $validated = $request->validate([
             'Nombre' => 'required|unique:Categoria,Nombre,'.$request->CategoriaID.',CategoriaID|max:100',
         ]);
 
-        $categoria = new Categoria();
+        $categoria = Categoria::find($CategoriaID);
         $categoria->Nombre = $validated['Nombre'];
         $categoria->save();
         

@@ -4,7 +4,7 @@
     <div class="container color2 shadow-lg border mt-5">
       
         <div class="row mb-3 color3">
-            <h5 class="text-start text-light m-1">Alta de Producto</h5>
+            <h5 class="text-start text-light m-1">Listado de Productos</h5>
         </div>
       
         <div class="d-grid d-md-flex justify-content-md-end mb-3">
@@ -26,22 +26,29 @@
               
               @forelse ($productos as $producto)
                   <tr>
-                      <td>
+                      <td class="text-center">
                           <img src="" alt="">
                           {{$producto->Nombre}}
                       </td>
-                      <td>{{$producto->categoria->Nombre}}</td>
-                      <td>{{$producto->Precio}}</td>
-                      <td>{{$producto->Cantidad}}</td>
-                      <td>{{$producto->Descripcion}}</td>
+                      <td class="text-center">{{$producto->categoria->Nombre ?? "--"}}</td>
+                      <td class="text-center">{{$producto->Precio ?? "--"}}</td>
+                      <td class="text-center">{{$producto->Cantidad ?? "--"}}</td>
+                      <td class="text-center">{{$producto->Descripcion ?? "--" }} </td>
                       <td>
-                          <button class="btn btn-success bi bi-pencil-square"></button>
-                          <button class="btn btn-danger bi bi-x-square"></button>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{route('productoEdit' , ['ProductoID' => $producto->ProductoID])}}" class="btn btn-success bi bi-pencil-square me-3"></a>
+                            
+                            <form action="{{route('productoDestroy' , ['ProductoID' => $producto->ProductoID])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger bi bi-x-square"></button>
+                            </form>
+                        </div>   
                       </td>
                   </tr>
               @empty
               <tr>
-                  <td class="text-center fw-bold" colspan="7">SIN DATOS</td> 
+                  <td class="text-center fw-bold" colspan="7">No se Encontraron Productos</td> 
               </tr>    
               @endforelse
              </tbody>
