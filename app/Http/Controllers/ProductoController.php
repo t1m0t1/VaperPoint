@@ -33,18 +33,29 @@ class ProductoController extends Controller
     {
         $validated = $request->validate([
             'Nombre' => 'required|max:100|min:3',
-            'cantidad' => 'required|max:999',
+            'Cantidad' => 'required|max:3',
             'Precio' => 'required',
-            'CategoriaID' => 'required'
+            'Descripcion' => 'nullable',
+            'CategoriaID' => 'required',
+            'Importado' => 'nullable',
+            'Imagen' => 'nullable|image'
         ]);
         $producto = new Producto();
         $producto->Nombre = $validated['Nombre'];
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
         $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->Importado = $validated['Importado'];
+
+        if($request->hasFile("Imagen")){
+            $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
+            request()->Imagen->move(public_path('images/productos'), $fileName);
+            $producto->Imagen = $fileName;
+        }
+
         $producto->save();
 
-        /* Producto::create($request->all()); */
         return redirect()->route('productoIndex');
 
     }
@@ -62,7 +73,8 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        $categorias = Categoria::all();
+        return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]);
     }
 
     /**

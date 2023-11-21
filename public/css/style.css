@@ -4,6 +4,12 @@
 .color4 {background-color: #99a2e7;}
 .color5 {background-color: #dbe3ed;}
 
+.td-image{
+  height: 3em;
+  width: 3em;
+  border-radius: 38%;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
