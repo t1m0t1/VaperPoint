@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
-<script>
+{{-- <script>
     function mostarModal(){
+        console.log("dentro");
         document.addEventListener('livewire:load', () => {
             Livewire.emit('emitMostraModalEditProducto')
-
         });
     }
-</script>
+</script> --}}
 
 @section('contenido')
     <div class="container m-6">
@@ -43,7 +43,7 @@
                         <td>{{$producto->Descripcion}}</td>
                         <td>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success bi bi-pencil-square" onclick="mostarModal()">
+                            <button type="button" class="btn btn-success bi bi-pencil-square" onclick="Livewire.emit('emitMostraModalEditProducto', {{$producto->ProductoID}})" >
                             </button>
 
                             <button class="btn btn-danger bi bi-x-square"></button>
@@ -56,7 +56,8 @@
                 @endforelse
             </tbody>
         </table>
-
-        @livewire('producto.producto-modificar')
+        <div>
+            @livewire('producto.producto-modificar')
+        </div>
     </div>
 @endsection

@@ -21,7 +21,7 @@
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="Cantidad" class="form-label">Cantidad</label>
+                      <label for="Cantidad" class="form-label text-light">Cantidad</label>
                       <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" >
                       @error('Cantidad')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -29,7 +29,7 @@
                     </div>
     
                     <div class="col-md-2 ms-4">
-                      <label for="Precio" class="form-label">Precio</label>
+                      <label for="Precio" class="form-label text-light">Precio</label>
                       <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio">
                       @error('Precio')
                         <div class="alert alert-danger">{{ $message }}</div>    
@@ -39,7 +39,7 @@
     
                   <div class="input-group mt-3">
                     <div class="col-md-3">
-                      <label for="CategoriaID" class="form-label">Categorias</label>
+                      <label for="CategoriaID" class="form-label text-light">Categorias</label>
                       <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()">
                         <option selected disabled value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
