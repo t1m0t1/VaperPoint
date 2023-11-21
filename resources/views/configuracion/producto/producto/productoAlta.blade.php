@@ -67,7 +67,7 @@
                   <div class="input-group mt-4">
                     <div class="col-md-10">
                       <label for="descripcion" class="form-label text-light">Descripcion</label>
-                      <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                      <textarea class="form-control" id="Descripcion" name="Descripcion"></textarea>
                     </div>
                   </div>
 

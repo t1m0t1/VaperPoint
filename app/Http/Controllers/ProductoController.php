@@ -44,7 +44,7 @@ class ProductoController extends Controller
         $producto->Nombre = $validated['Nombre'];
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
-        $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->Descripcion = $validated['Descripcion'];
         $producto->CategoriaID = $validated['CategoriaID'];
         $producto->Importado = $validated['Importado'];
 

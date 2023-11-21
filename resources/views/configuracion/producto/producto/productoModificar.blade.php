@@ -14,7 +14,7 @@
                   <div class="input-group mt-3">
                     <div class="col-md-4">
                       <label for="Nombre" class="form-label text-light">Nombre</label>
-                      <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre')}}" name="Nombre">
+                      <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre' , $producto->Nombre)}}" name="Nombre">
                       @error('Nombre')
                         <div class="alert alert-danger">{{ $message }}</div>
                       @enderror
@@ -22,7 +22,7 @@
     
                     <div class="col-md-2 ms-5">
                       <label for="Cantidad" class="form-label text-light">Cantidad</label>
-                      <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" >
+                      <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad"  name="Cantidad" min="0" >
                       @error('Cantidad')
                         <div class="alert alert-danger">{{ $message }}</div>
                       @enderror
