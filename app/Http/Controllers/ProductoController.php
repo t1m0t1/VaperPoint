@@ -45,6 +45,8 @@ class ProductoController extends Controller
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
         $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->Importado = $validated['Importado'];
 
         if($request->hasFile("Imagen")){
             $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
