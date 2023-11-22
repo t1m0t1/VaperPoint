@@ -41,7 +41,7 @@
                     <div class="col-md-3">
                       <label for="CategoriaID" class="form-label text-light">Categorias <i class="bi bi-braces-asterisk"></i></label>
                       <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()">
-                        <option selected disabled value="">Categorias</option>
+                        <option selected value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
                         <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
                         @endforeach
@@ -53,8 +53,8 @@
     
                     <div class="col-md-3 ms-4 ">
                       <label for="Importado" class="form-label text-light">Sub Categoria</label>
-                      <select class="form-select @error('Importado') is-invalid @enderror" aria-label="Disabled select example" id="selectImportado" name="Importado" disabled>
-                        <option selected>Solo liquidos</option>
+                      <select class="form-select @error('Importado') is-invalid @enderror" id="selectImportado" name="Importado">
+                        <option value="" selected>Solo liquidos</option>
                         <option value="0">Nacionales</option>
                         <option value="1">Importados</option>
                         </select>
@@ -66,8 +66,8 @@
   
                   <div class="input-group mt-4">
                     <div class="col-md-10">
-                      <label for="descripcion" class="form-label text-light">Descripcion</label>
-                      <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                      <label for="Descripcion" class="form-label text-light">Descripcion</label>
+                      <textarea class="form-control" id="Descripcion" name="Descripcion"></textarea>
                     </div>
                   </div>
 
