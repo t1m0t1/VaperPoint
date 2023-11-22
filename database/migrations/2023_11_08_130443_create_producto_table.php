@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('producto', function (Blueprint $table) {
+        Schema::create('Producto', function (Blueprint $table) {
             $table->id('ProductoID');
             $table->string('Nombre', 100);
             $table->bigInteger('Cantidad');
@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('Imagen')->nullable();
             $table->float('Precio')->nullable();
             $table->boolean('Importado')->nullable();
-            $table->foreignId('categoriaID')->references('CategoriaID')->on('categoria');
+            $table->foreignId('CategoriaID')->references('CategoriaID')->on('Categoria');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('producto');
+        Schema::dropIfExists('Producto');
     }
 };
