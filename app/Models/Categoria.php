@@ -12,11 +12,11 @@ class Categoria extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'categoria';
+    protected $table = 'Categoria';
     protected $primaryKey = 'CategoriaID';
     protected $fillable = ['nombre'];
 
-    public function Productos(): HasMany
+    public function productos(): HasMany
     {
         return $this->hasMany(Producto::class);
     }

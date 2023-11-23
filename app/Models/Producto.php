@@ -12,8 +12,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Producto extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
-    protected $table = 'producto';
+    protected $table = 'Producto';
     protected $primaryKey = 'ProductoID';
     protected $fillable = [
         'nombre',
@@ -26,7 +27,7 @@ class Producto extends Model
 
     public function categoria(): BelongsTo
     {
-        return $this->belongsTo(Categoria::class, 'categoriaID');
+        return $this->belongsTo(Categoria::class, 'CategoriaID');
     }
 
 
