@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $productos = Producto::orderBy('Descripcion')->get();
+    return view('welcome')->with(['productos' => $productos]);
 });
 
 Route::prefix('/configuracion')->group(function () {

@@ -22,6 +22,7 @@ class TestProductosSeeder extends Seeder
             Producto::create([
                 "Nombre" => $value->Nombre,
                 "Cantidad" => $value->Cantidad,
+                "Imagen" => $value->Imagen,
                 "Precio" => $value->Precio,
                 "CategoriaID" => $value->CategoriaID
             ]);
