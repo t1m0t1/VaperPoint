@@ -53,6 +53,12 @@
   margin: 5px;
 }
 
+/* .l-image{
+  position: absolute;
+  right: 5em;
+  z-index: 100;
+} */
+
 .profile-card-2:hover img {
   filter: grayscale(100%);
 }
