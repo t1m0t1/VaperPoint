@@ -10,7 +10,7 @@
   background-color: #FFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
   background-position: center;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   margin: 10px auto;
   cursor: pointer;
@@ -19,6 +19,7 @@
 
 .profile-card-2 img {
   transition: all linear 0.25s;
+  width:15em;
 }
 
 .profile-card-2 .nombre {
@@ -53,14 +54,12 @@
   margin: 5px;
 }
 
-/* .l-image{
-  position: absolute;
-  right: 5em;
-  z-index: 100;
-} */
-
 .profile-card-2:hover img {
   filter: grayscale(100%);
+  position: absolute;
+  right: 0;
+  margin-top: -16px;
+  margin-right: 50px;
 }
 
 .profile-card-2:hover .nombre{

@@ -131,9 +131,7 @@
                   <p class="text-danger"><strong>Sin Stock</strong></p>
               @endif
               </div>
-              <div class="l-image">
                 <img src="{{asset('/images/productos/mods/'.$p->Imagen)}}" class="img-responsive">
-              </div>
               <div class="nombre"> {{$p->Nombre}} </div>
               <div class="precio">Precio: <strong>$ {{$p->Precio}}</strong></div>
           </div>
