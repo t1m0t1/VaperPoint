@@ -23,6 +23,7 @@ class TestProductosSeeder extends Seeder
                 "Nombre" => $value->Nombre,
                 "Cantidad" => $value->Cantidad,
                 "Imagen" => $value->Imagen,
+                "Descripcion" => $value->Descripcion,
                 "Precio" => $value->Precio,
                 "CategoriaID" => $value->CategoriaID
             ]);

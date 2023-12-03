@@ -38,7 +38,7 @@
                   <tr>
                     <td class="text-center">
                         @isset ($producto->Imagen)
-                            <img class="td-image" src="{{asset('./images/productos/'.$producto->Imagen)}}" alt="">
+                            <img class="td-image" src="{{asset('./images/productos/mods/'.$producto->Imagen)}}" alt="">
                         @endisset
                     </td>
                       <td class="text-center">

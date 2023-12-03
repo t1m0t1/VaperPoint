@@ -31,7 +31,6 @@ class ProductoModificar extends Component
     public function mostrarModal(Producto $producto)
     {
         $this->mostrar = true;
-        dd($producto);
         $this->Nombre = $producto->Nombre;
         $this->Precio = $producto->Precio;
         $this->Cantidad = $producto->Cantidad;
