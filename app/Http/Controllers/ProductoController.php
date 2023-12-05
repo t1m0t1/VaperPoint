@@ -46,13 +46,15 @@ class ProductoController extends Controller
         $producto->Precio = $validated['Precio'];
         $producto->Descripcion = $validated['Descripcion'];
         $producto->CategoriaID = $validated['CategoriaID'];
-        $producto->Importado = $validated['Importado'];
+        $producto->Importado = $validated['Importado'] ?? null;
 
         if($request->hasFile("Imagen")){
+            $categoria = Categoria::find($producto->CategoriaID);
             $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
-            request()->Imagen->move(public_path('images/productos'), $fileName);
+            request()->Imagen->move(public_path('images/productos/'.$categoria->Nombre.'s/'), $fileName);
             $producto->Imagen = $fileName;
         }
+
 
         $producto->save();
 

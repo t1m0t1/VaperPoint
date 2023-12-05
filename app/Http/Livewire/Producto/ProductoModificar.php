@@ -9,7 +9,8 @@ use Livewire\Component;
 class ProductoModificar extends Component
 {
 
-    public $Nombre, $Precio, $Cantidad, $Descripcion, $Categoria;
+    public $nombre, $precio, $cantidad, $descripcion, $categoria, $imagen, $rutaImagen;
+    public Producto $producto;
     public $categorias;
     public $mostrar = false;
     public $listeners = [
@@ -28,14 +29,18 @@ class ProductoModificar extends Component
         return view('livewire.producto.producto-modificar');
     }
 
-    public function mostrarModal(Producto $producto)
-    {
+    public function mostrarModal($productoID)
+    {   
+        $this->producto = Producto::find($productoID);
+        
+        $this->nombre = $this->producto->Nombre;
+        $this->precio = $this->producto->Precio;
+        $this->cantidad = $this->producto->Cantidad;
+        $this->descripcion = $this->producto->Descripcion;
+        $this->categoria = $this->producto->CategoriaID;
+        $this->imagen = $this->producto->Imagen;
+        $this->rutaImagen = $this->producto->categoria->Nombre;
         $this->mostrar = true;
-        $this->Nombre = $producto->Nombre;
-        $this->Precio = $producto->Precio;
-        $this->Cantidad = $producto->Cantidad;
-        $this->Descripcion = $producto->Descripcion;
-        $this->Categoria = $producto->Categoria;
 
     }
 

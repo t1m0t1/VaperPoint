@@ -1,5 +1,5 @@
 <div>
-    {{-- MODAL --}}
+  {{-- MODAL --}}
     <div class="modal fade @if($mostrar) show @endif" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: @if($mostrar) block @else none @endif">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -16,25 +16,25 @@
                         <div class="col-md-7">
                           <div class="input-group mt-3">
                             <div class="col-md-4">
-                              <label for="Nombre" class="form-label text-light">Nombre</label>
-                              <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre')}}" name="Nombre" wire:model="Nombre">
-                              @error('Nombre')
+                              <label for="nombre" class="form-label text-light">Nombre</label>
+                              <input type="text" class="form-control @error('nombre') is-invalid @enderror" value="{{ old ('nombre')}}" name="nombre" wire:model="nombre">
+                              @error('nombre')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
             
                             <div class="col-md-2 ms-4">
-                              <label for="Cantidad" class="form-label text-light">Cantidad</label>
-                              <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" wire:model="Cantidad">
-                              @error('Cantidad')
+                              <label for="cantidad" class="form-label text-light">Cantidad</label>
+                              <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad" value="cantidad" required name="cantidad" min="0" wire:model="cantidad">
+                              @error('cantidad')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
             
                             <div class="col-md-2 ms-4">
-                              <label for="Precio" class="form-label text-light">Precio</label>
-                              <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio" wire:model="Precio">
-                              @error('Precio')
+                              <label for="precio" class="form-label text-light">Precio</label>
+                              <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio" value="precio" min="0" name="precio" wire:model="precio">
+                              @error('precio')
                                 <div class="alert alert-danger">{{ $message }}</div>    
                               @enderror
                             </div>
@@ -42,14 +42,14 @@
             
                           <div class="input-group mt-3">
                             <div class="col-md-3">
-                              <label for="CategoriaID" class="form-label text-light">Categorias</label>
-                              <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()" wire.model="Categoria">
+                              <label for="categoria" class="form-label text-light">Categorias</label>
+                              <select class="form-select @error('categoria') is-invalid @enderror" id="selectCategoria" name="categoria" onchange="isImport()" wire.model="categoria">
                                 <option selected disabled value="">Categorias</option>
                                @foreach ($categorias as $categoria)    
                                 <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
                                 @endforeach
                               </select>
-                              @error('CategoriaID')
+                              @error('categoria')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
@@ -70,7 +70,7 @@
                           <div class="input-group mt-3">
                             <div class="col-md-8">
                               <label for="descripcion" class="form-label text-light">Descripcion</label>
-                              <textarea class="form-control" id="descripcion" name="descripcion" wire:model="Descripcion"></textarea>
+                              <textarea class="form-control" id="descripcion" name="descripcion" wire:model="descripcion"></textarea>
                             </div>
                           </div>
         
@@ -79,7 +79,8 @@
                         <div class="col-md-4 me-3">
                             <div class="col-md-12 border my-3 mx-auto">
                               <div class="col-md-9 my-3 mx-auto">
-                                <img src="{{asset('img/no-disponible.jpg')}}" class="img-thumbnail">
+                                <img src="{{asset('images/productos/'. $rutaImagen .'s/'. $imagen)}}" class="img-thumbnail" wire:model="Imagen">
+                               
                               </div>
                               <input class="form-control" type="file" id="formFile">
                             </div>
@@ -91,7 +92,7 @@
                     
                   </div>
         
-                  </form>
+                </form>
             </div>
 
             <div class="modal-footer color3">
@@ -99,6 +100,6 @@
             </div>
           </div>
         </div>
-      </div>
-
+    </div>
 </div>
+
