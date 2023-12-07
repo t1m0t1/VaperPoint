@@ -23,6 +23,13 @@ class ProductoModificar extends Component
         $this->categorias = Categoria::orderby('Nombre')->get();
     }
 
+    protected $rules = [
+        'nombre' => 'required|max:100',
+        'precio' => 'required',
+        'cantidad' => 'required',
+        'descripcion' => 'required',
+        'categoria' => 'required',
+    ];
 
     public function render()
     {
@@ -42,6 +49,20 @@ class ProductoModificar extends Component
         $this->rutaImagen = $this->producto->categoria->Nombre;
         $this->mostrar = true;
 
+    }
+
+
+    public function editProducto()
+    { 
+
+        /* $this->validate(); */
+        dd($this->validate());
+        $this->producto->Nombre = $this->nombre;
+        $this->producto->Precio = $this->precio;
+        $this->producto->Cantidad = $this->cantidad;
+        $this->producto->Descripcion = $this->descripcion;
+        $this->producto->CategoriaID = $this->categoria;
+        $this->producto->save();
     }
 
     public function cerrarModal()
