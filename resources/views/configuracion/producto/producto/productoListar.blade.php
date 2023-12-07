@@ -68,6 +68,6 @@
              </tbody>
          </table>
         </div>
+        @livewire('producto.producto-modificar')
     </div>
-    @livewire('producto.producto-modificar')
 @endsection

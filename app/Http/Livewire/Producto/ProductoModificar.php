@@ -5,11 +5,12 @@ namespace App\Http\Livewire\Producto;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Livewire\Component;
+use DB;
 
 class ProductoModificar extends Component
 {
 
-    public $Nombre, $Precio, $Cantidad, $Descripcion, $Categoria;
+    public $nombre, $precio, $cantidad, $descripcion, $categoria;
     public $categorias;
     public $mostrar = false;
     public $listeners = [
@@ -28,16 +29,23 @@ class ProductoModificar extends Component
         return view('livewire.producto.producto-modificar');
     }
 
-    public function mostrarModal(Producto $producto)
+    public function mostrarModal($id)
     {
-        $this->mostrar = true;
-        dd($producto);
-        $this->Nombre = $producto->Nombre;
-        $this->Precio = $producto->Precio;
-        $this->Cantidad = $producto->Cantidad;
-        $this->Descripcion = $producto->Descripcion;
-        $this->Categoria = $producto->Categoria;
+        try {
+            DB::beginTransaction();
+            $producto = Producto::find($id);
+            $this->nombre = $producto->Nombre;
+            $this->precio = $producto->Precio;
+            $this->cantidad = $producto->Cantidad;
+            $this->descripcion = $producto->Descripcion;
+            $this->categoria = $producto->Categoria;
+            DB::commit();
 
+            $this->mostrar = true;
+        } catch (\Exception $ex) {
+            DB::rollback();
+            dd($ex);
+        }
     }
 
     public function cerrarModal()

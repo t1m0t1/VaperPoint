@@ -1,5 +1,4 @@
-<div>
-    {{-- MODAL --}}
+
     <div class="modal fade @if($mostrar) show @endif" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: @if($mostrar) block @else none @endif">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -16,25 +15,25 @@
                         <div class="col-md-7">
                           <div class="input-group mt-3">
                             <div class="col-md-4">
-                              <label for="Nombre" class="form-label text-light">Nombre</label>
-                              <input type="text" class="form-control @error('Nombre') is-invalid @enderror" value="{{ old ('Nombre')}}" name="Nombre" wire:model="Nombre">
-                              @error('Nombre')
+                              <label for="nombre" class="form-label text-light">Nombre</label>
+                              <input type="text" class="form-control @error('nombre') is-invalid @enderror" value="{{ old ('nombre')}}" name="nombre" wire:model="nombre">
+                              @error('nombre')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
             
                             <div class="col-md-2 ms-4">
-                              <label for="Cantidad" class="form-label text-light">Cantidad</label>
-                              <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" required name="Cantidad" min="0" wire:model="Cantidad">
-                              @error('Cantidad')
+                              <label for="cantidad" class="form-label text-light">Cantidad</label>
+                              <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad" value="{{ old ('cantidad', $cantidad)}}" required name="cantidad" min="0" wire:model="cantidad">
+                              @error('cantidad')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
             
                             <div class="col-md-2 ms-4">
-                              <label for="Precio" class="form-label text-light">Precio</label>
-                              <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio" wire:model="Precio">
-                              @error('Precio')
+                              <label for="precio" class="form-label text-light">Precio</label>
+                              <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio" value="{{ old ('precio', $cantidad)}}" min="0" name="precio" wire:model="precio">
+                              @error('precio')
                                 <div class="alert alert-danger">{{ $message }}</div>    
                               @enderror
                             </div>
@@ -42,26 +41,26 @@
             
                           <div class="input-group mt-3">
                             <div class="col-md-3">
-                              <label for="CategoriaID" class="form-label text-light">Categorias</label>
-                              <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()" wire.model="Categoria">
+                              <label for="categoriaID" class="form-label text-light">Categorias</label>
+                              <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()" wire.model="Categoria">
                                 <option selected disabled value="">Categorias</option>
                                @foreach ($categorias as $categoria)    
-                                <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
+                                <option value="{{$categoria->categoriaID}}" >{{$categoria->Nombre}}</option>
                                 @endforeach
                               </select>
-                              @error('CategoriaID')
+                              @error('categoriaID')
                                 <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                             </div>
             
                             <div class="col-md-3 ms-4 ">
-                              <label for="Importado" class="form-label text-light">Sub Categoria</label>
-                              <select class="form-select @error('Importado') is-invalid @enderror" aria-label="Disabled select example" id="selectImportado" name="Importado" disabled>
+                              <label for="importado" class="form-label text-light">Sub Categoria</label>
+                              <select class="form-select @error('importado') is-invalid @enderror" aria-label="Disabled select example" id="selectimportado" name="importado" disabled>
                                 <option selected>Solo liquidos</option>
                                 <option value="0">Nacionales</option>
                                 <option value="1">Importados</option>
                                 </select>
-                                @error('CategoriaID')
+                                @error('importado')
                                   <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -70,7 +69,7 @@
                           <div class="input-group mt-3">
                             <div class="col-md-8">
                               <label for="descripcion" class="form-label text-light">Descripcion</label>
-                              <textarea class="form-control" id="descripcion" name="descripcion" wire:model="Descripcion"></textarea>
+                              <textarea class="form-control" id="descripcion" name="descripcion" wire:model="descripcion"></textarea>
                             </div>
                           </div>
         
@@ -99,6 +98,4 @@
             </div>
           </div>
         </div>
-      </div>
-
-</div>
+    </div>
