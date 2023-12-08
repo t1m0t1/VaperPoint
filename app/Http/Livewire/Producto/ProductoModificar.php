@@ -25,10 +25,10 @@ class ProductoModificar extends Component
 
     protected $rules = [
         'nombre' => 'required|max:100',
-        'precio' => 'required',
+        'precio' => 'required|decimal:2',
         'cantidad' => 'required',
-        'descripcion' => 'required',
-        'categoria' => 'required',
+        'descripcion' => 'required|max:1000',
+        'categoria' => 'required|exists:Categoria,CategoriaID',
     ];
 
     public function render()
@@ -55,14 +55,15 @@ class ProductoModificar extends Component
     public function editProducto()
     { 
 
-        /* $this->validate(); */
-        dd($this->validate());
+        $this->validate();
+        /* dd($this->validate()); */
         $this->producto->Nombre = $this->nombre;
         $this->producto->Precio = $this->precio;
         $this->producto->Cantidad = $this->cantidad;
         $this->producto->Descripcion = $this->descripcion;
         $this->producto->CategoriaID = $this->categoria;
         $this->producto->save();
+        $this->mostrar = false;
     }
 
     public function cerrarModal()

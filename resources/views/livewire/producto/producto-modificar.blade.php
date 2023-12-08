@@ -33,7 +33,7 @@
                 
                                 <div class="col-md-2 ms-4">
                                   <label for="precio" class="form-label text-light">Precio</label>
-                                  <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio" value="precio" min="0" name="precio" wire:model="precio">
+                                  <input type="number" step="0.25" class="form-control  @error('precio') is-invalid @enderror" id="precio" value="precio" min="0" name="precio" wire:model="precio">
                                   @error('precio')
                                     <div class="alert alert-danger">{{ $message }}</div>    
                                   @enderror
@@ -43,10 +43,10 @@
                               <div class="input-group mt-3">
                                 <div class="col-md-3">
                                   <label for="categoria" class="form-label text-light">Categorias</label>
-                                  <select class="form-select @error('categoria') is-invalid @enderror" id="selectCategoria" name="categoria" onchange="isImport()" wire.model="categoria">
-                                    <option selected disabled value="">Categorias</option>
-                                  @foreach ($categorias as $categoria)    
-                                    <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
+                                  <select class="form-select @error('categoria') is-invalid @enderror" id="selectCategoria" name="categoria" onchange="isImport()" wire:model="categoria">
+                                    <option value="">Categorias</option>
+                                  @foreach ($categorias as $ca)    
+                                    <option  value="{{$ca->CategoriaID}}" >{{$ca->Nombre}}</option>
                                     @endforeach
                                   </select>
                                   @error('categoria')
@@ -72,6 +72,9 @@
                                   <label for="descripcion" class="form-label text-light">Descripcion</label>
                                   <textarea class="form-control" id="descripcion" name="descripcion" wire:model="descripcion"></textarea>
                                 </div>
+                                @error('descripcion')
+                                <div class="alert alert-danger">{{ $message }}</div>    
+                                @enderror
                               </div>
             
                             </div>
