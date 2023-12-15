@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $productos = Producto::orderBy('Descripcion')->get();
+    $productos = Producto::orderBy('Descripcion')->paginate(10);
     return view('welcome')->with(['productos' => $productos]);
 });
 
