@@ -15,7 +15,36 @@ function editProducto(productoID){
         }
     }).fail(function() { 
         alert('ocurrio un error');
-    })
+    });
+    $('#editProductoGuardar').click(function (e) { 
+        e.preventDefault();
+        let nombre = $('#nombre').val();
+        let cantidad = $('#cantidad').val();
+        let precio = $('#precio').val();
+        let selectCategoria = $('#selectCategoria').val();
+        let descipcion = $('#descipcion').val();
+        let imagen = $('#imagen').val();
+        let csrf = $('#token').val();
+        $.ajax({
+            type: "PUT",
+            url: "/configuracion/producto/test/modificar/" + productoID,
+            data: {
+                Nombre: nombre,
+                Cantidad: cantidad,
+                Precio: precio,
+                CategoriaID: selectCategoria,
+                Descripcion: descipcion,
+                Imagen: imagen,
+                _token: csrf
+            },
+            success: function () {
+                alert('Se modifico satisfatoriamente')
+                location.reload()
+            }
+        }).fail(function() { 
+            alert('ocurrio un error');
+        });
+    });
 };
 
 

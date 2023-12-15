@@ -68,11 +68,12 @@
           <div class="modal-content">
             <div class="modal-header color3">
               <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Editar Producto</h1>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" onclick="Livewire.emit('cerrarModal')"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" id="cerrarModal"></button>
             </div>
             <form method="POST">
             @csrf
                 <div class="modal-body color2">
+                <input type="hidden" id="token" value="{{ csrf_token() }}">
                     
                         <div class="col-md-12 d-grid">
                           <div class="row ms-5">
@@ -161,7 +162,7 @@
                 </div>
 
                 <div class="modal-footer color3">
-                  <button type="button" class="btn btn-primary" wire:click="editProducto">Guardar Cambios</button>
+                  <button type="button" class="btn btn-primary" id="editProductoGuardar">Guardar Cambios</button>
                 </div>
             </form>
           </div>

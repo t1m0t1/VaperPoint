@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Producto;
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -22,4 +23,18 @@ class TestController extends Controller
         $categoria = Categoria::find($producto->CategoriaID);
         return response()->json($data = [$producto, $categoria]);
     }
+
+    public function update(Request $request, $productoID)
+    {
+        $producto = Producto::find($productoID);
+        $producto->Nombre = $request->Nombre;
+        $producto->Cantidad = $request->Cantidad;
+        $producto->Precio = $request->Precio;
+        $producto->CategoriaID = $request->CategoriaID;
+        $producto->Imagen = $request->Imagen;
+        $producto->save();
+        /* dd($request); */
+        
+    }
+
 }
