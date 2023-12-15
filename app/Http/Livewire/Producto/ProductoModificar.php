@@ -56,13 +56,15 @@ class ProductoModificar extends Component
     { 
 
         $this->validate();
-        /* dd($this->validate()); */
+      
         $this->producto->Nombre = $this->nombre;
         $this->producto->Precio = $this->precio;
         $this->producto->Cantidad = $this->cantidad;
         $this->producto->Descripcion = $this->descripcion;
         $this->producto->CategoriaID = $this->categoria;
+
         $this->producto->save();
+        
         $this->mostrar = false;
     }
 
