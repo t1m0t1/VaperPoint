@@ -15,6 +15,10 @@ html, body {
   height:100%;
 }
 
+.w-5.h-5{
+  height: 15px;
+}
+
 .full-screen {
     font-family: "Open Sans", sans-serif;
     background-image: url('/img/background.jpg');
@@ -158,12 +162,6 @@ html, body {
   /**
   * Desktop Navigation 
   */
-  nav{
-    width: 100%;
-  }
-  nav div div div span span span svg path{
-    height: 2px;
-  }
   .navbar {
     padding: 0;
   }

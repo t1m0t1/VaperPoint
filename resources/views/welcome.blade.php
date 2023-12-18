@@ -145,7 +145,7 @@
      </div>
      @endforeach 
     </div>
-    <div class="d-flex justify-content-end">
+    <div class="d-flex">
       {{ $productos->links() }}  
     </div>
   </div>
