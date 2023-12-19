@@ -25,9 +25,9 @@ class ProductoModificar extends Component
 
     protected $rules = [
         'nombre' => 'required|max:100',
-        'precio' => 'required|decimal:2',
-        'cantidad' => 'required',
-        'descripcion' => 'required|max:1000',
+        'precio' => 'required|decimal:2',/*TODO ABEL considerar numeric como validador ya que no siempre va a tener un decimal el precio */
+        'cantidad' => 'required', /*TODO ABEL Mas alla de que el input en el front se encuentre validado, en el back hay que validar el tipo de dato ingresado. en este caso es numeric */
+        'descripcion' => 'required|max:1000',/* TODO ABEL si bien la base de datos permite almacenar 1000 caracteres, es mejor limitar esta cantidad de caracteres a un numero de 256 a 500 caracteres */
         'categoria' => 'required|exists:Categoria,CategoriaID',
     ];
 
@@ -38,7 +38,6 @@ class ProductoModificar extends Component
 
     public function mostrarModal($productoID)
     {   
-        dd('dentro');
         $this->producto = Producto::find($productoID);
         
         $this->nombre = $this->producto->Nombre;
