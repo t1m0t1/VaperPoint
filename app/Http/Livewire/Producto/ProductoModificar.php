@@ -38,6 +38,7 @@ class ProductoModificar extends Component
 
     public function mostrarModal($productoID)
     {   
+        dd('dentro');
         $this->producto = Producto::find($productoID);
         
         $this->nombre = $this->producto->Nombre;
