@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('welcome')->with(['productos' => $productos]);
 });
 
+Route::prefix('/productos')->group(function () {
+    Route::get('/catalogo', [ProductoController::class,'catalogo']);
+});
+
 Route::prefix('/configuracion')->group(function () {
     
     Route::prefix('/producto')->group(function () {

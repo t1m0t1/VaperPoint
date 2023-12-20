@@ -17,6 +17,11 @@ class ProductoController extends Controller
         return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
     }
 
+    public function catalogo()
+    {
+        return view('catalogo.productoCatalogo');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
