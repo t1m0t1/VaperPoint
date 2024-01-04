@@ -83,36 +83,14 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        @foreach ($categorias as $c)
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h3><a href="">Mods</a></h3>
+            <h3><a href="/catalogo/{{$c->CategoriaID}}">{{$c->Nombre}}</a></h3>
           </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Liquidos</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Accesorios</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Resistencias</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="">Reparaciones</a></h3>
-          </div>
-        </div>
+        </div>    
+        @endforeach
       </div>
 
     </div>
