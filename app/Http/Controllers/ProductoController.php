@@ -17,9 +17,9 @@ class ProductoController extends Controller
         return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
     }
 
-    public function catalogo()
+    public function catalogo($categoriaID)
     {
-        return view('catalogo.productoCatalogo');
+        return view('catalogo.productoCatalogo', ["categoriaID" => $categoriaID]);
     }
 
     /**

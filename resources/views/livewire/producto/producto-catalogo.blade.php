@@ -6,16 +6,16 @@
                     <div class="color4 card">
                         <div class="text-end">
                             @if ($p->Cantidad > 0)
-                                <p class="fs-6 text-secondary me-1"><strong>Disponible</strong></p>
+                                <p class="fs-6 text-success me-1"><strong>Disponible</strong></p>
                             @else
                                 <p class="text-danger me-1"><strong>Agotado</strong></p>
                             @endif
                         </div>
-                        <img src="{{ asset('/images/productos/mods/' . $p->Imagen) }}" class="card-img-to">
+                        <img src="{{ asset('/images/productos/'.$categoria->Nombre.'/' . $p->Imagen) }}" class="">
                         <div class="card-body p-0">
-                            <p class="col-11 d-inline-block text-truncate m-0">{{ $p->Nombre }}</p>
+                            <p class="col-11 d-inline-block text-truncate m-0"><strong>{{ $p->Nombre }}</strong></p>
                             <div class="bg-gradient-secondary">
-                                <p class="fs-6 me-3 text-center"> <strong>USD {{ $p->Precio }}</strong></p>
+                                <p class="fs-6 me-3 text-center"> <strong>USD ${{ $p->Precio }}</strong></p>
                             </div>
                             <div class="d-flex justify-content-end mt-3">
                                 <a href="#" class="btn btn-primary col-12">Ver mas</a>

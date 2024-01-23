@@ -1,247 +1,657 @@
 [
-    {"Nombre" : "dotaio v2 carbon edicion",
+    {"Nombre" : "Luxe 80 (Gris)",
     "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Luxe 80 (Gris).png",
+    "Precio" : 65,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vaporesso gen 160 (Rosa)",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gen 160 (Rosa).png",
+    "Precio" : 75,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Vaporesso gen 160 (Verde)",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gen 160 (Verde).png",
+    "Precio" : 75,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vaporesso gtx go 40 (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gtx go 40 (Azul).png",
+    "Precio" : 45,
     "Importado" : 0,
-    "CategoriaID" : 2
-}
-    ,{"Nombre" : "dotaio v2 carbon edicion",
-    "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
-    "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vaporesso gtx go 40 (Negro)",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gtx go 40 (Negro).png",
+    "Precio" : 45,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Vaporesso gtx go 40 (Multicolor)",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gtx go 40 (Multicolor).png",
+    "Precio" : 45,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vaporesso gtx go 40 (Rojo)",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso gtx go 40 (Rojo).png",
+    "Precio" : 45,
     "Importado" : 0,
-    "CategoriaID" : 2
-}
-    ,{"Nombre" : "dotaio v2 carbon edicion",
-    "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
-    "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vaporesso luxe pm40 (Rosa)",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso luxe pm40 (Rosa).png",
+    "Precio" : 55,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Vaporesso luxe pm40 (Multicolor)",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vaporesso luxe pm40 (Multicolor).png",
+    "Precio" : 55,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Voopoo argus air (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Voopoo argus air (Azul).png",
+    "Precio" : 55,
     "Importado" : 0,
-    "CategoriaID" : 2
-}
-    ,{"Nombre" : "dotaio v2 carbon edicion",
-    "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
-    "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Voopoo argus air (Rojo)",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Voopoo argus air (Rojo).png",
+    "Precio" : 55,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Voopoo argus air (Blanco)",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Voopoo argus air (Blanco).png",
+    "Precio" : 55,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Voopoo argus gt (Negro)",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Voopoo argus gt (Negro).png",
+    "Precio" : 76,
     "Importado" : 0,
-    "CategoriaID" : 2
-}
-    ,{"Nombre" : "dotaio v2 carbon edicion",
-    "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
-    "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Wismec luxotic (Verde)",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Wismec luxotic (Verde).png",
+    "Precio" : 40,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Wismec luxotic (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Wismec luxotic (Azul).png",
+    "Precio" : 40,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Dovpo mvv",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Dovpo mvv.png",
+    "Precio" : 50,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 4
 }
-    ,{"Nombre" : "dotaio v2 carbon edicion",
+
+
+
+
+,{
+    "Nombre" : "Kit de herramientas",
     "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Kit de herramientas.png",
+    "Precio" : 50,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Wraps fundas pilas",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Wraps fundas pilas.png",
+    "Precio" : 0.55,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Gomitas",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Gomitas.png",
+    "Precio" : 0.50,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Vandy vape bottle 8ml",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Vandy vape bottle 8ml.png",
+    "Precio" : 0.50,
     "Importado" : 0,
-    "CategoriaID" : 2
-}
-    ,{"Nombre" : "dotaio v2 carbon edicion",
-    "Cantidad" : 5,
-    "Descripcion" : "Suicide Mods vuelve a la carga más fuerte que nunca, junto a The Vaping Bogan, Orca Vape y la colaboración del modder Monarchy Vapes, para traernos un increíble diseño, elegante a la par que cómodo como nos tiene acostumbrado la marca, además de incorporar un depósito Ether Boro como complemento. ",
-    "Imagen" : "dotaio-v2-carbon-edicion-limitada-by-dotmod.png",
-    "Precio" : 25.5,
-    "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Estuche para pilas",
     "Cantidad" : 5,
-    "Descripcion" : "Desde el 20 de Noviembre hasta el 1 de Diciembre, cada día promoción de 2 dispositivos a ¡MITAD DE PRECIO! Si quieres estar informado síguenos en nuestro Instagram para no perdértelas. Exclusivo Online. Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "kit-luxe-x-by-vaporesso.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Estuche para pilas.png",
+    "Precio" : 10,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Dotaio V2 Carbon Edicion Limitada by Dotmod",
+    "Nombre" : "Cap was nano",
     "Cantidad" : 5,
-    "Descripcion" : "¿Eres un enamorado de los Dotaio V2? Este dispositivo no puede faltar en tu colección, Dotmod nos trae una edición limitada del famoso Dotaio V2, Dotaio V2 Carbón Edición limitada. Un dispositivo fabricado en su totalidad en fibra de carbono, que le proporciona robustez pero ligereza. Alimentado por una batería externa 18650 (NO INCLUIDA), este dispositivo es capaz de proporcionarnos una potencia máxima de salida de hasta 75W.",
-    "Imagen" : "kit-stubby-aio-monarch-edition-ether-boro-by-suicide-mods.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Cap was nano.png",
+    "Precio" : 4.30,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
 }
 ,{
-    "Nombre" : "Pod Kit Argus P1S by Voopoo",
+    "Nombre" : "Cargador vapcell 4c",
     "Cantidad" : 5,
-    "Descripcion" : "Voopoo nos presenta su nuevo dispositivo, Pod Argus P1S, el hermano mayor del ya conocido Argus Pod P1. Este dispositivo cuenta con una batería interna de gran capacidad, 800mAh, que le permite alcanzar una potencia máxima de 25W, además de un diseño futurista que te dejara embelesado.",
-    "Imagen" : "pod-orion-ii-by-lve.png",
-    "Precio" : 25.5,
+    "Descripcion" : "",
+    "Imagen" : "Cargador vapcell 4c.png",
+    "Precio" : 23,
     "Importado" : 0,
-    "CategoriaID" : 2
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Cargador 2 celdas",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cargador 2 celdas.png",
+    "Precio" : 15,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Pinzas vpdam",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pinzas vpdam.png",
+    "Precio" : 11.50,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Alicate",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Alicate.png",
+    "Precio" : 7.50,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Pilas efest 21700",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pilas efest 21700.png",
+    "Precio" : 16,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Pilas efest 18650",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pilas efest 18650.png",
+    "Precio" : 15,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Pilas sony 18650 vtc6",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pilas sony 18650 vtc6.png",
+    "Precio" : 15,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Pilas efest 21700",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pilas efest 21700.png",
+    "Precio" : 16,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+,{
+    "Nombre" : "Algodon cotton",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Algodon cotton.png",
+    "Precio" : 10,
+    "Importado" : 0,
+    "CategoriaID" : 1
+}
+
+
+
+
+,{
+    "Nombre" : "Gtx 0.8 mesh coil",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gtx 0.8 mesh coil.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Gtx 0.6 mesh coil",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gtx 0.6 mesh coil.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Gtx 0.15 mesh coil",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gtx 0.15 mesh coil.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Pnp-m2 0.6",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pnp-m2 0.6.png",
+    "Precio" : 6.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Pnp-vm4 0.6",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pnp-vm4 0.6.png",
+    "Precio" : 6.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Pnp-vm5 0.2",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pnp-vm5 0.2.png",
+    "Precio" : 6.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Tpp-dm2 0.2",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Tpp-dm2 0.2.png",
+    "Precio" : 9,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Tpp-dm3 0.15",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Tpp-dm3 0.15.png",
+    "Precio" : 9,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Demon killer",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Demon killer.png",
+    "Precio" : 22,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Gt mesh 0.18",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gt mesh 0.18.png",
+    "Precio" : 6.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Eleaf",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Eleaf.png",
+    "Precio" : 3,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Euc 0.3",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Euc 0.3.png",
+    "Precio" : 5,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Qf meshed 0.2",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Qf meshed 0.2.png",
+    "Precio" : 6,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Nx 1 coils",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Nx 1 coils.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Uwell nichrome 0.6",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Uwell nichrome 0.6.png",
+    "Precio" : 6,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Caliburn g coil 0.8",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Caliburn g coil 0.8.png",
+    "Precio" : 7.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Rpm coil mesh 0.4",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Rpm coil mesh 0.4.png",
+    "Precio" : 4.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Vape pen 22",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Vape pen 22.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "M17 core",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "M17 core.png",
+    "Precio" : 4.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "V8 baby m2 0.25",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "V8 baby m2 0.25.png",
+    "Precio" : 4.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "V12-x4",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "V12-x4.png",
+    "Precio" : 0,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "V12 prince mesh",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "V12 prince mesh.png",
+    "Precio" : 0,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "V8 x-baby m2",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "V8 x-baby m2.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Uforce u2 0.4",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Uforce u2 0.4.png",
+    "Precio" : 5,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "X-force coil 0.6",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "X-force coil 0.6.png",
+    "Precio" : 5,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Mi-pod sv",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Mi-pod sv.png",
+    "Precio" : 4,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Luxe pm40",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Luxe pm40.png",
+    "Precio" : 11,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Gtx pod 22",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gtx pod 22.png",
+    "Precio" : 11,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Swag pod",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Swag pod.png",
+    "Precio" : 13.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Iq cartucho",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Iq cartucho.png",
+    "Precio" : 6,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Xros s 0.8 mesh pod",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Xros s 0.8 mesh pod.png",
+    "Precio" : 8,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Nord 2 nord pod",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Nord 2 nord pod.png",
+    "Precio" : 5.50,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Novo 2 pod dc 1.4 mtl",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Novo 2 pod dc 1.4 mtl.png",
+    "Precio" : 5,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Novo 2 pod mesh 1.0",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Novo 2 pod mesh 1.0.png",
+    "Precio" : 5,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Fnn 28-m",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Fnn 28-m.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Fnn 35",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Fnn 35.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Cnn 60",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cnn 60.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Cnk 70",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cnk 70.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Ann-26-m",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Ann-26-m.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Ann 36",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Ann 36.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Akn 48",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Akn 48.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
 }
 ]
