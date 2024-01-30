@@ -16,8 +16,7 @@ class ProductoCatalogo extends Component
     }
     public function render()
     {
-        $productos = Producto::orderBy('Nombre')
-        ->where('CategoriaID',  $this->categoria->CategoriaID)
+        $productos = Producto::where("CategoriaID",$this->categoria->CategoriaID)->orderBy('Nombre')
         ->simplePaginate(9);
         return view('livewire.producto.producto-catalogo', ['productos'=> $productos]);
     }

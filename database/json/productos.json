@@ -654,4 +654,115 @@
     "Importado" : 0,
     "CategoriaID" : 6
 }
+,{
+    "Nombre" : "Cp coils tnt",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cp coils tnt.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Cp coils lightning",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cp coils lightning.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Cp coils thunder steel",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cp coils thunder steel.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+,{
+    "Nombre" : "Cp coils taser single",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cp coils taser single.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 6
+}
+
+
+
+,{
+    "Nombre" : "Stng mtl",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Stng mtl.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Drop rda",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Drop rda.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Cogtra rta",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Cogtra rta.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Wasp nano rda",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Wasp nano rda.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Vandy vape mesh rda",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Vandy vape mesh rda.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Mutant rda",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Mutant rda.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Pnp pod tank",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Pnp pod tank.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
+,{
+    "Nombre" : "Gear rta",
+    "Cantidad" : 5,
+    "Descripcion" : "",
+    "Imagen" : "Gear rta.png",
+    "Precio" : 2.90,
+    "Importado" : 0,
+    "CategoriaID" : 2
+}
 ]
