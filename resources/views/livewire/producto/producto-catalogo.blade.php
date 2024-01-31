@@ -3,16 +3,20 @@
         <div class="row row-cols-3 row-cols-md-5 g-4">
             @foreach ($productos as $p)
                 <div class="col-6">
-                    <div class="color4 card">
+                    <div class=" card">
                         <div class="text-end">
                             @if ($p->Cantidad > 0)
-                                <p class="fs-6 text-primary me-1"><strong>Disponible</strong></p>
-                            @else
-                                <p class="text-danger me-1"><strong>Agotado</strong></p>
+{{--                                 <p class="fs-6 text-primary me-1"><strong>Disponible</strong></p>
+ --}}                            
+ <p class="text-danger me-1"><strong>Agotado</strong></p>
+ 
+ @else
                             @endif
                         </div>
                         <img src="{{ asset('/images/productos/'.$categoria->Nombre.'/' . $p->Imagen) }}" style="height: 40vh">
                         <div class="card-body p-0">
+                            <p class="text-center">00</p>
+                            <br>
                             <p class="col-11 d-inline-block text-truncate m-0"><strong>{{ $p->Nombre }}</strong></p>
                             <div class="bg-gradient-secondary">
                                 <p class="fs-4 me-3 text-center"> 
