@@ -6,17 +6,41 @@
                     <div class=" card">
                         <div class="text-end">
                             @if ($p->Cantidad > 0)
-{{--                                 <p class="fs-6 text-primary me-1"><strong>Disponible</strong></p>
- --}}                            
- <p class="text-danger me-1"><strong>Agotado</strong></p>
- 
- @else
+                                <p class="fs-6 text-primary me-1"><strong>Disponible</strong></p>
+                                @else
+                                <p class="text-danger me-1"><strong>Agotado</strong></p>
                             @endif
                         </div>
-                        <img src="{{ asset('/images/productos/'.$categoria->Nombre.'/' . $p->Imagen) }}" style="height: 40vh">
+                        
+                        <div id="carouselExampleDark{{$p->ProductoID}}" class="carousel carousel-dark slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('/images/productos/'.$categoria->Nombre.'/' . $p->Imagen) }}" style="height: 40vh">
+                                </div>
+                              @if($p->Descripcion)
+                              <div class="carousel-item vapor" style="height: 40vh; background-image: url({{asset('./img/background.jpg')}})">
+                                <p class="text-left text-light">{{$p->Descripcion}}</p>
+                              </div>
+                              @endif
+                            </div>
+                            @if($p->Descripcion)
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                                @endif
+                          </div>
+
+                       
                         <div class="card-body p-0">
-                            <p class="text-center">00</p>
-                            <br>
                             <p class="col-11 d-inline-block text-truncate m-0"><strong>{{ $p->Nombre }}</strong></p>
                             <div class="bg-gradient-secondary">
                                 <p class="fs-4 me-3 text-center"> 
@@ -28,9 +52,6 @@
                                 </strong>
                             </p>
                             </div>
-                           {{--  <div class="d-flex justify-content-end mt-3">
-                                <a href="#" class="btn btn-primary col-12">Ver mas</a>
-                            </div> --}}
                         </div>
                     </div>
                 </div>

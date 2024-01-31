@@ -1,7 +1,7 @@
 [
     {"Nombre" : "Luxe 80 (Gris)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Luxe 80 (Gris).png",
     "Precio" : 65,
     "Importado" : 0,
@@ -10,7 +10,7 @@
 ,{
     "Nombre" : "Vaporesso gen 160 (Rosa)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gen 160 (Rosa).png",
     "Precio" : 75,
     "Importado" : 0,
@@ -19,7 +19,7 @@
 ,{
     "Nombre" : "Vaporesso gen 160 (Verde)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gen 160 (Verde).png",
     "Precio" : 75,
     "Importado" : 0,
@@ -28,7 +28,7 @@
 ,{
     "Nombre" : "Vaporesso gtx go 40 (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gtx go 40 (Azul).png",
     "Precio" : 45,
     "Importado" : 0,
@@ -37,7 +37,7 @@
 ,{
     "Nombre" : "Vaporesso gtx go 40 (Negro)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gtx go 40 (Negro).png",
     "Precio" : 45,
     "Importado" : 0,
@@ -46,7 +46,7 @@
 ,{
     "Nombre" : "Vaporesso gtx go 40 (Multicolor)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gtx go 40 (Multicolor).png",
     "Precio" : 45,
     "Importado" : 0,
@@ -55,7 +55,7 @@
 ,{
     "Nombre" : "Vaporesso gtx go 40 (Rojo)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso gtx go 40 (Rojo).png",
     "Precio" : 45,
     "Importado" : 0,
@@ -64,7 +64,7 @@
 ,{
     "Nombre" : "Vaporesso luxe pm40 (Rosa)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso luxe pm40 (Rosa).png",
     "Precio" : 55,
     "Importado" : 0,
@@ -73,7 +73,7 @@
 ,{
     "Nombre" : "Vaporesso luxe pm40 (Multicolor)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vaporesso luxe pm40 (Multicolor).png",
     "Precio" : 55,
     "Importado" : 0,
@@ -82,7 +82,7 @@
 ,{
     "Nombre" : "Voopoo argus air (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Voopoo argus air (Azul).png",
     "Precio" : 55,
     "Importado" : 0,
@@ -91,7 +91,7 @@
 ,{
     "Nombre" : "Voopoo argus air (Rojo)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Voopoo argus air (Rojo).png",
     "Precio" : 55,
     "Importado" : 0,
@@ -100,7 +100,7 @@
 ,{
     "Nombre" : "Voopoo argus air (Blanco)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Voopoo argus air (Blanco).png",
     "Precio" : 55,
     "Importado" : 0,
@@ -109,7 +109,7 @@
 ,{
     "Nombre" : "Voopoo argus gt (Negro)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Voopoo argus gt (Negro).png",
     "Precio" : 76,
     "Importado" : 0,
@@ -118,7 +118,7 @@
 ,{
     "Nombre" : "Wismec luxotic (Verde)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Wismec luxotic (Verde).png",
     "Precio" : 40,
     "Importado" : 0,
@@ -127,7 +127,7 @@
 ,{
     "Nombre" : "Wismec luxotic (Azul)",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Wismec luxotic (Azul).png",
     "Precio" : 40,
     "Importado" : 0,
@@ -136,7 +136,7 @@
 ,{
     "Nombre" : "Dovpo mvv",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Dovpo mvv.png",
     "Precio" : 50,
     "Importado" : 0,
@@ -149,7 +149,7 @@
 ,{
     "Nombre" : "Kit de herramientas",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Kit de herramientas.png",
     "Precio" : 50,
     "Importado" : 0,
@@ -158,7 +158,7 @@
 ,{
     "Nombre" : "Wraps fundas pilas",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Wraps fundas pilas.png",
     "Precio" : 0.55,
     "Importado" : 0,
@@ -167,7 +167,7 @@
 ,{
     "Nombre" : "Gomitas",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gomitas.png",
     "Precio" : 0.50,
     "Importado" : 0,
@@ -176,7 +176,7 @@
 ,{
     "Nombre" : "Vandy vape bottle 8ml",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vandy vape bottle 8ml.png",
     "Precio" : 0.50,
     "Importado" : 0,
@@ -185,7 +185,7 @@
 ,{
     "Nombre" : "Estuche para pilas",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Estuche para pilas.png",
     "Precio" : 10,
     "Importado" : 0,
@@ -194,7 +194,7 @@
 ,{
     "Nombre" : "Cap was nano",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cap was nano.png",
     "Precio" : 4.30,
     "Importado" : 0,
@@ -203,7 +203,7 @@
 ,{
     "Nombre" : "Cargador vapcell 4c",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cargador vapcell 4c.png",
     "Precio" : 23,
     "Importado" : 0,
@@ -212,7 +212,7 @@
 ,{
     "Nombre" : "Cargador 2 celdas",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cargador 2 celdas.png",
     "Precio" : 15,
     "Importado" : 0,
@@ -221,7 +221,7 @@
 ,{
     "Nombre" : "Pinzas vpdam",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pinzas vpdam.png",
     "Precio" : 11.50,
     "Importado" : 0,
@@ -230,7 +230,7 @@
 ,{
     "Nombre" : "Alicate",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Alicate.png",
     "Precio" : 7.50,
     "Importado" : 0,
@@ -239,7 +239,7 @@
 ,{
     "Nombre" : "Pilas efest 21700",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pilas efest 21700.png",
     "Precio" : 16,
     "Importado" : 0,
@@ -248,7 +248,7 @@
 ,{
     "Nombre" : "Pilas efest 18650",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pilas efest 18650.png",
     "Precio" : 15,
     "Importado" : 0,
@@ -257,7 +257,7 @@
 ,{
     "Nombre" : "Pilas sony 18650 vtc6",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pilas sony 18650 vtc6.png",
     "Precio" : 15,
     "Importado" : 0,
@@ -266,7 +266,7 @@
 ,{
     "Nombre" : "Pilas efest 21700",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pilas efest 21700.png",
     "Precio" : 16,
     "Importado" : 0,
@@ -275,7 +275,7 @@
 ,{
     "Nombre" : "Algodon cotton",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Algodon cotton.png",
     "Precio" : 10,
     "Importado" : 0,
@@ -288,7 +288,7 @@
 ,{
     "Nombre" : "Gtx 0.8 mesh coil",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gtx 0.8 mesh coil.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -297,7 +297,7 @@
 ,{
     "Nombre" : "Gtx 0.6 mesh coil",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gtx 0.6 mesh coil.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -306,7 +306,7 @@
 ,{
     "Nombre" : "Gtx 0.15 mesh coil",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gtx 0.15 mesh coil.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -315,7 +315,7 @@
 ,{
     "Nombre" : "Pnp-m2 0.6",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pnp-m2 0.6.png",
     "Precio" : 6.50,
     "Importado" : 0,
@@ -324,7 +324,7 @@
 ,{
     "Nombre" : "Pnp-vm4 0.6",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pnp-vm4 0.6.png",
     "Precio" : 6.50,
     "Importado" : 0,
@@ -333,7 +333,7 @@
 ,{
     "Nombre" : "Pnp-vm5 0.2",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pnp-vm5 0.2.png",
     "Precio" : 6.50,
     "Importado" : 0,
@@ -342,7 +342,7 @@
 ,{
     "Nombre" : "Tpp-dm2 0.2",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Tpp-dm2 0.2.png",
     "Precio" : 9,
     "Importado" : 0,
@@ -351,7 +351,7 @@
 ,{
     "Nombre" : "Tpp-dm3 0.15",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Tpp-dm3 0.15.png",
     "Precio" : 9,
     "Importado" : 0,
@@ -360,7 +360,7 @@
 ,{
     "Nombre" : "Demon killer",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Demon killer.png",
     "Precio" : 22,
     "Importado" : 0,
@@ -369,7 +369,7 @@
 ,{
     "Nombre" : "Gt mesh 0.18",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gt mesh 0.18.png",
     "Precio" : 6.50,
     "Importado" : 0,
@@ -378,7 +378,7 @@
 ,{
     "Nombre" : "Eleaf",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Eleaf.png",
     "Precio" : 3,
     "Importado" : 0,
@@ -387,7 +387,7 @@
 ,{
     "Nombre" : "Euc 0.3",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Euc 0.3.png",
     "Precio" : 5,
     "Importado" : 0,
@@ -396,7 +396,7 @@
 ,{
     "Nombre" : "Qf meshed 0.2",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Qf meshed 0.2.png",
     "Precio" : 6,
     "Importado" : 0,
@@ -405,7 +405,7 @@
 ,{
     "Nombre" : "Nx 1 coils",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Nx 1 coils.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -414,7 +414,7 @@
 ,{
     "Nombre" : "Uwell nichrome 0.6",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Uwell nichrome 0.6.png",
     "Precio" : 6,
     "Importado" : 0,
@@ -423,7 +423,7 @@
 ,{
     "Nombre" : "Caliburn g coil 0.8",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Caliburn g coil 0.8.png",
     "Precio" : 7.50,
     "Importado" : 0,
@@ -432,7 +432,7 @@
 ,{
     "Nombre" : "Rpm coil mesh 0.4",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Rpm coil mesh 0.4.png",
     "Precio" : 4.50,
     "Importado" : 0,
@@ -441,7 +441,7 @@
 ,{
     "Nombre" : "Vape pen 22",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vape pen 22.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -450,7 +450,7 @@
 ,{
     "Nombre" : "M17 core",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "M17 core.png",
     "Precio" : 4.50,
     "Importado" : 0,
@@ -459,7 +459,7 @@
 ,{
     "Nombre" : "V8 baby m2 0.25",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "V8 baby m2 0.25.png",
     "Precio" : 4.50,
     "Importado" : 0,
@@ -468,7 +468,7 @@
 ,{
     "Nombre" : "V12-x4",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "V12-x4.png",
     "Precio" : 0,
     "Importado" : 0,
@@ -477,7 +477,7 @@
 ,{
     "Nombre" : "V12 prince mesh",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "V12 prince mesh.png",
     "Precio" : 0,
     "Importado" : 0,
@@ -486,7 +486,7 @@
 ,{
     "Nombre" : "V8 x-baby m2",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "V8 x-baby m2.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -495,7 +495,7 @@
 ,{
     "Nombre" : "Uforce u2 0.4",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Uforce u2 0.4.png",
     "Precio" : 5,
     "Importado" : 0,
@@ -504,7 +504,7 @@
 ,{
     "Nombre" : "X-force coil 0.6",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "X-force coil 0.6.png",
     "Precio" : 5,
     "Importado" : 0,
@@ -513,7 +513,7 @@
 ,{
     "Nombre" : "Mi-pod sv",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Mi-pod sv.png",
     "Precio" : 4,
     "Importado" : 0,
@@ -522,7 +522,7 @@
 ,{
     "Nombre" : "Luxe pm40",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Luxe pm40.png",
     "Precio" : 11,
     "Importado" : 0,
@@ -531,7 +531,7 @@
 ,{
     "Nombre" : "Gtx pod 22",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gtx pod 22.png",
     "Precio" : 11,
     "Importado" : 0,
@@ -540,7 +540,7 @@
 ,{
     "Nombre" : "Swag pod",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Swag pod.png",
     "Precio" : 13.50,
     "Importado" : 0,
@@ -549,7 +549,7 @@
 ,{
     "Nombre" : "Iq cartucho",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Iq cartucho.png",
     "Precio" : 6,
     "Importado" : 0,
@@ -558,7 +558,7 @@
 ,{
     "Nombre" : "Xros s 0.8 mesh pod",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Xros s 0.8 mesh pod.png",
     "Precio" : 8,
     "Importado" : 0,
@@ -567,7 +567,7 @@
 ,{
     "Nombre" : "Nord 2 nord pod",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Nord 2 nord pod.png",
     "Precio" : 5.50,
     "Importado" : 0,
@@ -576,7 +576,7 @@
 ,{
     "Nombre" : "Novo 2 pod dc 1.4 mtl",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Novo 2 pod dc 1.4 mtl.png",
     "Precio" : 5,
     "Importado" : 0,
@@ -585,7 +585,7 @@
 ,{
     "Nombre" : "Novo 2 pod mesh 1.0",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Novo 2 pod mesh 1.0.png",
     "Precio" : 5,
     "Importado" : 0,
@@ -594,7 +594,7 @@
 ,{
     "Nombre" : "Fnn 28-m",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Fnn 28-m.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -603,7 +603,7 @@
 ,{
     "Nombre" : "Fnn 35",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Fnn 35.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -612,7 +612,7 @@
 ,{
     "Nombre" : "Cnn 60",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cnn 60.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -621,7 +621,7 @@
 ,{
     "Nombre" : "Cnk 70",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cnk 70.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -630,7 +630,7 @@
 ,{
     "Nombre" : "Ann-26-m",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Ann-26-m.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -639,7 +639,7 @@
 ,{
     "Nombre" : "Ann 36",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Ann 36.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -648,7 +648,7 @@
 ,{
     "Nombre" : "Akn 48",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Akn 48.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -657,7 +657,7 @@
 ,{
     "Nombre" : "Cp coils tnt",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cp coils tnt.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -666,7 +666,7 @@
 ,{
     "Nombre" : "Cp coils lightning",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cp coils lightning.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -675,7 +675,7 @@
 ,{
     "Nombre" : "Cp coils thunder steel",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cp coils thunder steel.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -684,7 +684,7 @@
 ,{
     "Nombre" : "Cp coils taser single",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cp coils taser single.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -696,7 +696,7 @@
 ,{
     "Nombre" : "Stng mtl",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Stng mtl.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -705,7 +705,7 @@
 ,{
     "Nombre" : "Drop rda",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Drop rda.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -714,7 +714,7 @@
 ,{
     "Nombre" : "Cogtra rta",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Cogtra rta.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -723,7 +723,7 @@
 ,{
     "Nombre" : "Wasp nano rda",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Wasp nano rda.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -732,7 +732,7 @@
 ,{
     "Nombre" : "Vandy vape mesh rda",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Vandy vape mesh rda.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -741,7 +741,7 @@
 ,{
     "Nombre" : "Mutant rda",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Mutant rda.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -750,7 +750,7 @@
 ,{
     "Nombre" : "Pnp pod tank",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Pnp pod tank.png",
     "Precio" : 2.90,
     "Importado" : 0,
@@ -759,7 +759,7 @@
 ,{
     "Nombre" : "Gear rta",
     "Cantidad" : 5,
-    "Descripcion" : "",
+    "Descripcion" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis officia consectetur suscipit placeat cupiditate beatae fugit voluptatum minus, facilis molestiae et ad enim doloribus sed, quibusdam ut aliquid illo quae!",
     "Imagen" : "Gear rta.png",
     "Precio" : 2.90,
     "Importado" : 0,
