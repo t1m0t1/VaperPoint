@@ -29,7 +29,7 @@
          
                   <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                      <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                      <li><a class="nav-link scrollto active" href="/">Home</a></li>
                       <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                           <li class="dropdown"><a href="#"><span>Mods</span> <i class="bi bi-chevron-right"></i></a>
