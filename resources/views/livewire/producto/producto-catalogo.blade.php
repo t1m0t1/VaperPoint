@@ -12,27 +12,30 @@
                             @endif
                         </div>
                         
-                        <div id="carouselExampleDark{{$p->ProductoID}}" class="carousel carousel-dark slide" data-bs-interval="false">
+                        <div id="carousel{{$p->ProductoID}}" class="carousel carousel-dark slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('/images/productos/'.$categoria->Nombre.'/' . $p->Imagen) }}" style="height: 40vh">
+                                    <img src="{{ asset('/images/productos/'.$p->categoria->Nombre.'/' . $p->Imagen) }}" style="height:35vh;width: 100%">
                                 </div>
                               @if($p->Descripcion)
-                              <div class="carousel-item vapor" style="height: 40vh; background-image: url({{asset('./img/background.jpg')}})">
-                                <p class="text-left text-light">{{$p->Descripcion}}</p>
+                              <div class="carousel-item">
+                                <img src="{{ asset('/images/productos/'.$p->categoria->Nombre.'/' . $p->Imagen) }}" style="height:35vh; width: 100%; opacity:0.2;">
+                                <div class="position-absolute top-0 start-0">
+                                    <p class="text-left fw-bold">{{$p->Descripcion}}</p>
+                                </div>
                               </div>
                               @endif
                             </div>
                             @if($p->Descripcion)
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carousel{{$p->ProductoID}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel{{$p->ProductoID}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{$p->ProductoID}}" data-bs-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                               <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark{{$p->ProductoID}}" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel{{$p->ProductoID}}" data-bs-slide="next">
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="visually-hidden">Next</span>
                             </button>

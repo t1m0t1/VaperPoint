@@ -72,7 +72,9 @@
     </header>
     <!-- End Header -->
 
-<section id="hero" class="d-flex align-items-center justify-content-center">
+<section id="hero" class="d-flex align-items-center justify-content-center h-100">
+  <img src="{{ asset('/img/vaper-point-blanco.jpeg') }}" style=" width:60%"> {{-- Consultar ancho del fondo --}}
+  <div class="position-absolute justify-content-center">
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
@@ -84,7 +86,7 @@
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
         @foreach ($categorias as $c)
-        <div class="col-xl-2 col-md-4">
+        <div class="col-xl-4 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="/catalogo/{{$c->CategoriaID}}">{{$c->Nombre}}</a></h3>
@@ -94,6 +96,7 @@
       </div>
 
     </div>
+  </div>
   </section>
   <!-- End Hero -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

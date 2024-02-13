@@ -18,6 +18,6 @@ class ProductoCatalogo extends Component
     {
         $productos = Producto::where("CategoriaID",$this->categoria->CategoriaID)->orderBy('Nombre')
         ->simplePaginate(9);
-        return view('livewire.producto.producto-catalogo', ['productos'=> $productos]);
+        return view("livewire.producto.producto-catalogo", ['productos'=> $productos]);
     }
 }
