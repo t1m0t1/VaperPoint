@@ -21,11 +21,13 @@ Route::get('/', function () {
     return view('welcome')->with(['productos' => $productos]);
 });
 
+/* Route::prefix('/catalogo')->group(function () { */
+    Route::get('/catalogo/{CategoriaID}', [ProductoController::class,'catalogo']);
+/* }); */
+/* Comienzo de Configuracion */
 Route::prefix('/configuracion')->group(function () {
-    
+    /* Comienzo de Producto */
     Route::prefix('/producto')->group(function () {
-
-        Route::prefix('/producto')->group(function (){
             Route::controller(ProductoController::class)->group(function () {
                 Route::get('/listar', 'index')->name('productoIndex');
             
@@ -36,10 +38,9 @@ Route::prefix('/configuracion')->group(function () {
                 Route::put('/modificar/{ProductoID}', 'update')->name('productoUpdate');
             
                 Route::delete('/baja/{ProductoID}', 'destroy')->name('productoDestroy');
-
             });
-        });
-
+    /* Fin de Configuracion */
+        /* Comienzo de Categoria */
         Route::prefix('/categoria')->group(function (){
             Route::controller(CategoriaController::class)->group(function () {
                 Route::get('/listar', 'index')->name('categoriaIndex');
@@ -54,6 +55,17 @@ Route::prefix('/configuracion')->group(function () {
 
             });
         });
+        /* Fin de Categoria */
+        /* Comienzo de Venta */
+        Route::prefix('/venta')->group(function (){
+            Route::controller(VentaController::class)->group(function () {
+                Route::get('/listar', 'index')->name('VentaIndex');
+
+                Route::get('/alta', 'create')->name('VentaCreate');
+                Route::post('/alta', 'store')->name('VentaStore');
+            });
+        });
+        /* Fin de Categoria */
 
     });
 });

@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('venta_historicos', function (Blueprint $table) {
-            $table->id();
+        Schema::create('VentaHistorico', function (Blueprint $table) {
+            $table->id("VentaHistoricoID");
+            $table->foreignId('VentaID')->references('VentaID')->on('Venta');
+            $table->foreignId('ProductoID')->references('ProductoID')->on('Producto');
+            
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('venta_historicos');
+        Schema::dropIfExists('VentaHistoricos');
     }
 };
