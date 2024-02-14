@@ -13,7 +13,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $categorias = Categoria::all();
-        return view('configuracion.producto.categoria.categoriaListar', ['categorias' => $categorias]);
+        return view('configuracion.categoria.categoriaListar', ['categorias' => $categorias]);
     }
 
     /**
@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('configuracion.producto.categoria.categoriaAlta');
+        return view('configuracion.categoria.categoriaAlta');
     }
 
     /**
@@ -47,7 +47,7 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::find($categoriaID);
 
-        return view('configuracion.producto.categoria.categoriaModificar')->with(['categoria'=>$categoria]);
+        return view('configuracion.categoria.categoriaModificar')->with(['categoria'=>$categoria]);
 
     }
 

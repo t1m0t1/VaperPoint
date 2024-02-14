@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('VentaID');
             $table->float('MontoTotal');
             $table->bigInteger('CantidadTotal');
-            $table->timestamps('FechaVenta');
+            $table->date('FechaVenta');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentaController;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,7 @@ Route::prefix('/configuracion')->group(function () {
             
                 Route::delete('/baja/{ProductoID}', 'destroy')->name('productoDestroy');
             });
-    /* Fin de Configuracion */
+    /* Fin de Producto */
         /* Comienzo de Categoria */
         Route::prefix('/categoria')->group(function (){
             Route::controller(CategoriaController::class)->group(function () {
@@ -56,17 +57,14 @@ Route::prefix('/configuracion')->group(function () {
 
             });
         });
-        /* Fin de Categoria */
-        /* Comienzo de Venta */
-        Route::prefix('/venta')->group(function (){
-            Route::controller(VentaController::class)->group(function () {
-                Route::get('/listar', 'index')->name('VentaIndex');
-
-                Route::get('/alta', 'create')->name('VentaCreate');
-                Route::post('/alta', 'store')->name('VentaStore');
-            });
-        });
-        /* Fin de Categoria */
-
+        
     });
 });
+/* Fin de Categoria */
+/* Comienzo de Venta */
+Route::prefix('/venta')->group(function (){
+    Route::controller(VentaController::class)->group(function () {
+        Route::get('/listar', 'index')->name('VentaIndex');
+    });
+});
+/* Fin de Venta */

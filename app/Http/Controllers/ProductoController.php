@@ -13,8 +13,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::all();
-        return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
+        $productos = Producto::orderBy("Nombre")->paginate(10);
+        return view('configuracion.producto.productoListar', ['productos' => $productos]);
     }
 
     public function catalogo($categoriaID)
@@ -28,7 +28,7 @@ class ProductoController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-        return view('configuracion.producto.producto.productoAlta', ['categorias'=>$categorias]);
+        return view('configuracion.producto.productoAlta', ['categorias'=>$categorias]);
     }
 
     /**
@@ -79,7 +79,7 @@ class ProductoController extends Controller
     public function edit(Producto $producto)
     {
         $categorias = Categoria::all();
-        return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]);
+        return view('configuracion.producto.productoModificar', ['categorias'=>$categorias]);
     }
 
     /**

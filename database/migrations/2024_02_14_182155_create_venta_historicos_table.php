@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id("VentaHistoricoID");
             $table->foreignId('VentaID')->references('VentaID')->on('Venta');
             $table->foreignId('ProductoID')->references('ProductoID')->on('Producto');
-            
+            $table->bigInteger('Cantidad');
+            $table->float('Precio')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

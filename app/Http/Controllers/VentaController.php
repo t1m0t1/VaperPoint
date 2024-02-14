@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
+use App\Models\Venta;
 use Illuminate\Http\Request;
 
 class VentaController extends Controller
@@ -11,9 +13,9 @@ class VentaController extends Controller
      */
     public function index()
     {
-        //
+        $ventas = Venta::orderBy("FechaVenta")->paginate(10);
+        return view('venta.ventaListar', ["ventas" => $ventas]);
     }
-
     /**
      * Show the form for creating a new resource.
      */
