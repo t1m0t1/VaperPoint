@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 
@@ -18,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $productos = Producto::orderBy('Descripcion')->paginate(10);
-    return view('welcome')->with(['productos' => $productos]);
+    $categorias = Categoria::orderBy('Nombre')->get(); 
+    return view('welcome')->with(['productos' => $productos ,'categorias'=>$categorias]);
 });
 
 /* Route::prefix('/catalogo')->group(function () { */
     Route::get('/catalogo/{CategoriaID}', [ProductoController::class,'catalogo']);
 /* }); */
-/* Comienzo de Configuracion */
 Route::prefix('/configuracion')->group(function () {
     /* Comienzo de Producto */
     Route::prefix('/producto')->group(function () {

@@ -392,11 +392,11 @@ html, body {
   --------------------------------------------------------------*/
   #hero {
     width: 100%;
-    height: 100vh;
-    background: url("../img/vaper-point-fondo.jpg");
-    background-position: center;
+    /* background: url("../img/vaper-point-blanco.jpeg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    position: relative;
   }
   
   #hero:before {
@@ -435,7 +435,7 @@ html, body {
   }
   
   #hero .icon-box {
-    padding: 30px 20px;
+    padding: 2vmin 1vmin;
     transition: ease-in-out 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.3);
     height: 100%;

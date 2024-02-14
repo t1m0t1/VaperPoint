@@ -17,6 +17,11 @@ class ProductoController extends Controller
         return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
     }
 
+    public function catalogo($categoriaID)
+    {
+        return view('catalogo.productoCatalogo', ["categoriaID" => $categoriaID]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -35,10 +40,10 @@ class ProductoController extends Controller
             'Nombre' => 'required|max:100|min:3',
             'Cantidad' => 'required|max:3',
             'Precio' => 'required',
-            'Descripcion' => 'nullable',
+            'Descripcion' => 'nullable|max:500',
             'CategoriaID' => 'required',
             'Importado' => 'nullable',
-            'Imagen' => 'nullable|image'
+            'Imagen' => 'nullable|image|mime:jpg,jpeg,png'
         ]);
         $producto = new Producto();
         $producto->Nombre = $validated['Nombre'];
@@ -50,7 +55,7 @@ class ProductoController extends Controller
 
         if($request->hasFile("Imagen")){
             $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
-            request()->Imagen->move(public_path('images/productos'), $fileName);
+            request()->Imagen->move(public_path('images/productos/'.$producto->categoria->Nombre.'/'), $fileName);
             $producto->Imagen = $fileName;
         }
 
