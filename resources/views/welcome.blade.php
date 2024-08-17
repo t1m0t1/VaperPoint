@@ -17,11 +17,8 @@
     </head>
     <body>
 
-      <header id="header" class="fixed-top color2">
+{{--       <header id="header" class="fixed-top color2">
         <div class="container d-flex align-items-center justify-content-lg-between vapor">
-
-          <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Vaper<span>Point</span></a></h1> -->
-          <!-- Uncomment below if you prefer to use an image logo -->
           <a href="/" class="logo me-auto me-lg-0"><img src="./img/logo-fondo-png.png" alt="" class="img-fluid"></a>
  
           <nav id="navbar" class="navbar order-last order-lg-0">
@@ -69,7 +66,7 @@
           </nav>
           <!-- .navbar -->
         </div>
-    </header>
+    </header> --}}
     <!-- End Header -->
 
 <section id="hero" class="d-flex align-items-center justify-content-center h-100">
