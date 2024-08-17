@@ -45,12 +45,13 @@ class ProductoController extends Controller
             'Importado' => 'nullable',
             'Imagen' => 'nullable|image|mime:jpg,jpeg,png'
         ]);
+
         $producto = new Producto();
         $producto->Nombre = $validated['Nombre'];
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
-        $producto->Descripcion = $validated['Descripcion'];
         $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->Descripcion = $validated['Descripcion'];
         $producto->Importado = $validated['Importado'];
 
         if($request->hasFile("Imagen")){
