@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,6 +59,20 @@ Route::prefix('/configuracion')->group(function () {
 
                 Route::delete('/baja/{CategoriaID}', 'destroy')->name('categoriaDestroy');
 
+            });
+        });
+
+        Route::prefix('/test')->group(function(){
+            Route::controller(TestController::class)->group(function(){
+                Route::get('/listar', 'index')->name('testIndex');
+            
+                Route::get('/alta', 'create')->name('testCreate');
+                Route::post('/alta', 'store')->name('testStore');
+            
+                Route::get('/modificar/{ProductoID}', 'edit')->name('testEdit');
+                Route::put('/modificar/{ProductoID}', 'update')->name('testUpdate');
+            
+                Route::delete('/baja/{ProductoID}', 'destroy')->name('testDestroy');
             });
         });
 

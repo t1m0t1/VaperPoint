@@ -10,7 +10,8 @@ use DB;
 class ProductoModificar extends Component
 {
 
-    public $nombre, $precio, $cantidad, $descripcion, $categoria;
+    public $nombre, $precio, $cantidad, $descripcion, $categoria, $imagen, $rutaImagen;
+    public Producto $producto;
     public $categorias;
     public $mostrar = false;
     public $listeners = [
@@ -23,6 +24,13 @@ class ProductoModificar extends Component
         $this->categorias = Categoria::orderby('Nombre')->get();
     }
 
+    protected $rules = [
+        'nombre' => 'required|max:100',
+        'precio' => 'required|decimal:2',/*TODO ABEL considerar numeric como validador ya que no siempre va a tener un decimal el precio */
+        'cantidad' => 'required', /*TODO ABEL Mas alla de que el input en el front se encuentre validado, en el back hay que validar el tipo de dato ingresado. en este caso es numeric */
+        'descripcion' => 'required|max:1000',/* TODO ABEL si bien la base de datos permite almacenar 1000 caracteres, es mejor limitar esta cantidad de caracteres a un numero de 256 a 500 caracteres */
+        'categoria' => 'required|exists:Categoria,CategoriaID',
+    ];
 
     public function render()
     {
@@ -46,6 +54,23 @@ class ProductoModificar extends Component
             DB::rollback();
             dd($ex);
         }
+    }
+
+
+    public function editProducto()
+    { 
+
+        $this->validate();
+      
+        $this->producto->Nombre = $this->nombre;
+        $this->producto->Precio = $this->precio;
+        $this->producto->Cantidad = $this->cantidad;
+        $this->producto->Descripcion = $this->descripcion;
+        $this->producto->CategoriaID = $this->categoria;
+
+        $this->producto->save();
+        
+        $this->mostrar = false;
     }
 
     public function cerrarModal()
