@@ -14,7 +14,7 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::all();
-        return view('configuraciones.productos.listar', ['productos' => $productos]);
+        return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
     }
 
     /**
@@ -23,7 +23,7 @@ class ProductoController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-        return view('configuraciones.productos.alta', ['categorias'=>$categorias]);
+        return view('configuracion.producto.producto.productoAlta', ['categorias'=>$categorias]);
     }
 
     /**
@@ -31,7 +31,31 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        Producto::create($request->all());
+        $validated = $request->validate([
+            'Nombre' => 'required|max:100|min:3',
+            'Cantidad' => 'required|max:3',
+            'Precio' => 'required',
+            'Descripcion' => 'nullable',
+            'CategoriaID' => 'required',
+            'Importado' => 'nullable',
+            'Imagen' => 'nullable|image'
+        ]);
+        $producto = new Producto();
+        $producto->Nombre = $validated['Nombre'];
+        $producto->Cantidad = $validated['Cantidad'];
+        $producto->Precio = $validated['Precio'];
+        $producto->Descripcion = $validated['Descripcion'];
+        $producto->CategoriaID = $validated['CategoriaID'];
+        $producto->Importado = $validated['Importado'];
+
+        if($request->hasFile("Imagen")){
+            $fileName = time().$producto->Nombre. '.' . request()->Imagen->getClientOriginalExtension();
+            request()->Imagen->move(public_path('images/productos'), $fileName);
+            $producto->Imagen = $fileName;
+        }
+
+        $producto->save();
+
         return redirect()->route('productoIndex');
 
     }
@@ -49,7 +73,8 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        $categorias = Categoria::all();
+        return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]);
     }
 
     /**

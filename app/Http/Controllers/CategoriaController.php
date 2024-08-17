@@ -13,7 +13,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $categorias = Categoria::all();
-        return view('configuraciones.categorias.listar', ['categorias' => $categorias]);
+        return view('configuracion.producto.categoria.categoriaListar', ['categorias' => $categorias]);
     }
 
     /**
@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('configuraciones.categorias.alta');
+        return view('configuracion.producto.categoria.categoriaAlta');
     }
 
     /**
@@ -29,39 +29,51 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        Categoria::create($request -> all());
-        return redirect()->route('categoriaIndex');
-    }
+        $validated = $request->validate([
+            'Nombre' => 'required|unique:Categoria|max:100',
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Categoria $categoria)
-    {
-        //
+        $categoria = new Categoria();
+        $categoria->Nombre = $validated['Nombre'];
+        $categoria->save();
+        
+        return redirect()->route('categoriaIndex');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categoria $categoria)
+    public function edit($categoriaID)
     {
-        //
+        $categoria = Categoria::find($categoriaID);
+
+        return view('configuracion.producto.categoria.categoriaModificar')->with(['categoria'=>$categoria]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categoria $categoria)
-    {
-        //
+    public function update($CategoriaID,Request $request)
+    { 
+        $validated = $request->validate([
+            'Nombre' => 'required|unique:Categoria,Nombre,'.$request->CategoriaID.',CategoriaID|max:100',
+        ]);
+
+        $categoria = Categoria::find($CategoriaID);
+        $categoria->Nombre = $validated['Nombre'];
+        $categoria->save();
+        
+        return redirect()->route('categoriaIndex');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($categoriaID)
     {
-        //
+        $categoria = Categoria::find($categoriaID);
+        $categoria -> delete();
+        return redirect()->route('categoriaIndex');
     }
 }
