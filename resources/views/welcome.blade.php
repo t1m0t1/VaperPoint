@@ -72,7 +72,9 @@
     </header>
     <!-- End Header -->
 
-<section id="hero" class="d-flex align-items-center justify-content-center">
+<section id="hero" class="d-flex align-items-center justify-content-center h-100">
+  <img src="{{ asset('/img/vaper-point-blanco.jpeg') }}" style=" width:60%"> {{-- Consultar ancho del fondo --}}
+  <div class="position-absolute justify-content-center">
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
@@ -83,73 +85,20 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
+        @foreach ($categorias as $c)
+        <div class="col-xl-4 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h3><a href="">Mods</a></h3>
+            <h3><a href="/catalogo/{{$c->CategoriaID}}">{{$c->Nombre}}</a></h3>
           </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Liquidos</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Accesorios</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Resistencias</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="">Reparaciones</a></h3>
-          </div>
-        </div>
+        </div>    
+        @endforeach
       </div>
 
     </div>
+  </div>
   </section>
   <!-- End Hero -->
-<section class="full-screen">
-  <div class="container mt-4">
-    <div class="row row-cols-2 row-cols-md-3 g-4">
-     @foreach ($productos as $p)
-     <div class="col-6">
-       <div class="card">
-         <div class="text-end me-1 mt-3">
-         @if ($p->Cantidad > 0)
-           <p class="fs-6 text-primary me-2"><strong>Disponible</strong></p>
-         @else
-           <p class="text-danger"><strong>Agotado</strong></p>
-         @endif
-         </div>
-         <img src="{{asset('/images/productos/mods/'.$p->Imagen)}}" class="card-img-to">
-         <div class="card-body">
-           <p class="fs-6 col-11 d-inline-block text-truncate">{{$p->Nombre}}</p>
-           <div class="bg-gradient-secondary">
-             <p class="fs-6 me-3 mt-3"> <strong>USD {{$p->Precio}}</strong></p>
-           </div>
-           <div class="d-flex justify-content-end mt-3">
-             <a href="#" class="btn btn-primary col-12">Ver mas</a>
-           </div>
-         </div>
-       </div>
-     </div>
-     @endforeach 
-    </div>
-    <div class="d-flex">
-      {{ $productos->links() }}  
-    </div>
-  </div>
-</section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

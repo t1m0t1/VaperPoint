@@ -9,11 +9,12 @@ use Illuminate\Database\Seeder;
 class CatergoriaSeeder extends Seeder
 {
     static $categorias = [
-        'Liquido',
-        'Mod',
-        'Atomizador',
-        'Resistencia',
-        'Accesorio',
+        'Accesorios',
+        'Atomizadores',
+        'Liquidos',
+        'Mods',
+        'Pods',
+        'Resistencias',
     ];
     /**
      * Run the database seeds.
