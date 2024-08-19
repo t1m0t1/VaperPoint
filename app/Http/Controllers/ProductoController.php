@@ -13,12 +13,22 @@ class ProductoController extends Controller
      */
     public function index()
     {
+        /*
+         TODO Abel
+         - Buscador por nombre y descripcion.
+         - filtros por categoria y ordenar por precio de mayor a menor .
+         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.
+         */
         $productos = Producto::orderBy('Nombre')->paginate(10);
-        return view('configuracion.producto.producto.productoListar', ['productos' => $productos]);
+        return view('configuracion.producto.producto.productoListar', 
+        [
+            'productos' => $productos,
+        ]);
     }
 
     public function catalogo($categoriaID)
     {
+        /* TODO Mati T cambiar estetica de tarjetas*/
         return view('catalogo.productoCatalogo', ["categoriaID" => $categoriaID]);
     }
 
