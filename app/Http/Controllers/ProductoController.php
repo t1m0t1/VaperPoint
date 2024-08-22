@@ -11,18 +11,46 @@ class ProductoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         /*
          TODO Abel
-         - Buscador por nombre y descripcion.
-         - filtros por categoria y ordenar por precio de mayor a menor .
-         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.
+         - Buscador por nombre y descripcion. ✓
+         - filtros por categoria y ordenar por precio de mayor a menor .✓
+         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.✓
          */
-        $productos = Producto::orderBy('Nombre')->paginate(10);
+
+        /* $productos = Producto::orderBy('Nombre')->paginate(10); */
+        $productos = Producto::query();
+        if($request->categoriaBuscada != null){
+           $productos = $productos->where('CategoriaID', $request->categoriaBuscada);
+        }
+        if($request->filtroPrecios != null){
+            $productos = $productos->orderBy('Precio', $request->filtroPrecios);
+        }
+        if($request->productoBuscado != null){
+            $productos = $productos->where('Nombre', 'LIKE', '%'.$request->productoBuscado.'%')->orWhere('Descripcion', 'LIKE', '%'.$request->productoBuscado.'%');
+        }
+        $categorias = Categoria::orderBy('Nombre')->get();
+
+        $productos = $productos->paginate(10);
+        $productos->appends([
+            'productoBuscado' => $request->productoBuscado,
+            'categoriaBuscada' => $request->categoriaBuscada,
+            'filtroPrecios' => $request->filtroPrecios
+        ]);
+        /* dd($productos); */
+
+
         return view('configuracion.producto.producto.productoListar', 
         [
             'productos' => $productos,
+            'categorias' => $categorias,
+            /* 'categoriaBuscada' => $categoriaBuscada */
+        ])->with([
+            'productoBuscado' => $request->productoBuscado,
+            'categoriaBuscada' => $request->categoriaBuscada,
+            'filtroPrecios' => $request->filtroPrecios
         ]);
     }
 

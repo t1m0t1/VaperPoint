@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $productos = Producto::orderBy('Descripcion')->paginate(10);
     $categorias = Categoria::orderBy('Nombre')->get(); 
-    return view('welcome')->with(['productos' => $productos ,'categorias'=>$categorias]);
+    return view('welcome')->with(['productos' => $productos ,'categorias' => $categorias]);
 });
 
 /* Route::prefix('/catalogo')->group(function () { */

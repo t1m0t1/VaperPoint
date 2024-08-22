@@ -4,8 +4,27 @@
         <div class="row mb-3 color3">
             <h5 class="text-start text-light m-1">Listado de Productos</h5>
         </div>
-        <div class="d-grid d-md-flex justify-content-md-end mb-3">
-            <a href="{{ route('productoCreate') }}" class="btn btn-success rounded-circle"> <i class="bi bi-plus"></i></a>
+        <div class="d-flex justify-content-between col-12">
+          <div class="d-flex col-10 justify-content-between">
+            <form action="{{route('productoIndex')}}" class="d-flex col-12 me-3" method="GET">
+              <input type="text" placeholder="Buscar Producto" class="form-control m-3" name="productoBuscado">
+              <select id="" class="form-select m-3" name="categoriaBuscada">
+                <option value="" selected>Categorias</option>
+                @foreach ($categorias as $categoria)
+                    <option @if($categoriaBuscada == $categoria->CategoriaID) selected @endif value="{{$categoria->CategoriaID}}">{{$categoria->Nombre}}</option>
+                @endforeach
+              </select>
+              <select name="filtroPrecios" id="" class="form-select m-3">
+                <option value="" selected>Precio</option>
+                <option @if($filtroPrecios == "ASC") selected @endif value="ASC">De Menor a Mayor</option>
+                <option @if($filtroPrecios == "DESC") selected @endif value="DESC">De Mayor a Menor</option>
+              </select>
+              <button type="submit" class="btn btn-info m-3"><i class="bi bi-search"></i></button>
+            </form>
+          </div>
+          <div class="col-1 ms-5 mt-3 float-end">
+              <a href="{{ route('productoCreate') }}" class="btn btn-success rounded-circle"> <i class="bi bi-plus"></i></a>
+          </div>
         </div>
         <div class="table-responsive">
             <table class="table table-bordered  table-primary table-hover table-sm">
@@ -34,7 +53,7 @@
                             <td class="text-center">{{ $producto->categoria->Nombre ?? '--' }}</td>
                             <td class="text-center">${{ $producto->Precio ?? '--' }}</td>
                             <td class="text-center">{{ $producto->Cantidad ?? '--' }}</td>
-                            <td class="text-center col-auto">{{ $producto->Descripcion ?? '--' }} </td>
+                            <td class="text-center col-auto text-truncate" style="max-width: 450px;">{{ $producto->Descripcion ?? '--' }} </td>
                             <td>
                                 <div class="d-flex justify-content-center mx-2">
                                     <a onclick="Livewire.emit('emitMostraModalEditProducto', {{ $producto->ProductoID }})"
