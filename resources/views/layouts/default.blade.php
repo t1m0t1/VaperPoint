@@ -19,12 +19,9 @@
         
         @livewireStyles
     </head>
-    <body style="background-image: url({{asset('./img/background.jpg')}});
-    background-size: cover;">
+    <body>
         <header id="header" class="fixed-top ">
-                <div class="container d-flex align-items-center justify-content-lg-between vapor">
-        
-                  <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Vaper<span>Point</span></a></h1> -->
+                <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <a href="/" class="logo me-auto me-lg-0"><img src="{{asset('./img/logo-fondo-png.png')}}" alt="" class="img-fluid"></a>
          
@@ -74,7 +71,7 @@
                   <!-- .navbar -->
                 </div>
         </header>
-        <main class="d-flex align-items-center justify-content-center mt-5">
+        <main class="d-flex align-items-center justify-content-center pt-5">
             
             @yield('contenido')
             
