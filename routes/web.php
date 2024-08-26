@@ -38,7 +38,7 @@ Route::prefix('/configuracion')->group(function () {
             Route::post('/alta', 'store')->name('productoStore');
         
             Route::get('/modificar/{ProductoID}', 'edit')->name('productoEdit');
-            Route::put('/modificar/{ProductoID}', 'update')->name('productoUpdate');
+            Route::post('/modificar/{ProductoID}', 'update')->name('productoUpdate');
         
             Route::delete('/baja/{ProductoID}', 'destroy')->name('productoDestroy');
 

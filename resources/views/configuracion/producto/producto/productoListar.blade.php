@@ -23,7 +23,7 @@
             </form>
           </div>
           <div class="col-1 ms-5 mt-3 float-end">
-              <a href="{{ route('productoCreate') }}" class="btn btn-success rounded-circle"> <i class="bi bi-plus"></i></a>
+              <a {{-- href="{{ route('productoCreate') }}" --}} onclick="abrirModalCrearProducto()" class="btn btn-success rounded-circle"><i class="bi bi-plus"></i></a>
           </div>
         </div>
         <div class="table-responsive">
@@ -56,8 +56,7 @@
                             <td class="text-center col-auto text-truncate" style="max-width: 450px;">{{ $producto->Descripcion ?? '--' }} </td>
                             <td>
                                 <div class="d-flex justify-content-center mx-2">
-                                    <a onclick="Livewire.emit('emitMostraModalEditProducto', {{ $producto->ProductoID }})"
-                                        class="btn btn-primary rounded-circle me-3">
+                                    <a onclick="abrirModalEditarProducto({{$producto->ProductoID}})" class="btn btn-primary rounded-circle me-3">
                                     <i class="bi bi-pencil-square"></i>
                                     </a>
     
@@ -84,6 +83,93 @@
             @endif
         </div>
         {{-- Inicio modal editar --}}
+        @component('componentes.modal')
+            @slot('modalTitulo')
+              <h1 class="modal-title fs-5 text-light" id="modalTitulo"></h1>    
+            @endslot
+            @slot('modalBody')
+                <div class="modal-body color2">
+                  <div class="col-md-12 d-grid">
+                    <div class="row ms-5">
+                      <div class="col-md-7">
+                        <div class="input-group mt-3">
+                          <div class="col-md-4">
+                            <label for="nombre" class="form-label text-light">Nombre</label>
+                            <input type="text" class="form-control @error('nombre') is-invalid @enderror"  name="nombre" id="nombre">
+                            <input type="text" id="productoID" hidden>
+                            @error('nombre')
+                              <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                          </div>
+          
+                          <div class="col-md-2 ms-4">
+                            <label for="cantidad" class="form-label text-light">Cantidad</label>
+                            <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad"  required name="cantidad" min="0">
+                            @error('cantidad')
+                              <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                          </div>
+          
+                          <div class="col-md-2 ms-4">
+                            <label for="precio" class="form-label text-light">Precio</label>
+                            <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio"  min="0" name="precio">
+                            @error('precio')
+                              <div class="alert alert-danger">{{ $message }}</div>    
+                            @enderror
+                          </div>
+                        </div>
+          
+                        <div class="input-group mt-3">
+                          <div class="col-md-3">
+                            <label for="categoriaID" class="form-label text-light">Categorias</label>
+                            <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()">
+                              <option selected disabled value="">Categorias</option>
+                              @foreach ($categorias as $categoria)
+                              <option value="{{$categoria->CategoriaID}}">{{$categoria->Nombre}}</option>
+                              @endforeach
+                            </select>
+                            @error('categoriaID')
+                              <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                          </div>
+          
+                          <div class="col-md-3 ms-4 ">
+                            <label for="importado" class="form-label text-light">Sub Categoria</label>
+                            <select class="form-select @error('importado') is-invalid @enderror" aria-label="Disabled select example" id="selectimportado" name="importado" disabled>
+                              <option selected value="">Solo liquidos</option>
+                              <option value="0">Nacionales</option>
+                              <option value="1">Importados</option>
+                              </select>
+                              @error('importado')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                              @enderror
+                          </div>
+                        </div>
+        
+                        <div class="input-group mt-3">
+                          <div class="col-md-8">
+                            <label for="descripcion" class="form-label text-light">Descripcion</label>
+                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 me-3">
+                          <div class="col-md-12 border my-3 mx-auto">
+                            <div class="col-md-9 my-3 mx-auto">
+                              <img src="{{asset('img/no-disponible.jpg')}}" class="img-thumbnail">
+                            </div>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            @endslot
+            @slot('botonSave')
+              <button type="button" class="btn btn-primary" id="botonSave" onclick="guardarProducto()"></button>
+            @endslot
+        @endcomponent
+
         <div class="modal fade show" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
               <div class="modal-content">
@@ -92,82 +178,7 @@
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 
-                <div class="modal-body color2">
-                    <form method="POST" action="#">
-                    @csrf
-                    <div class="col-md-12 d-grid">
-                      <div class="row ms-5">
-                        <div class="col-md-7">
-                          <div class="input-group mt-3">
-                            <div class="col-md-4">
-                              <label for="nombre" class="form-label text-light">Nombre</label>
-                              <input type="text" class="form-control @error('nombre') is-invalid @enderror"  name="nombre">
-                              @error('nombre')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                              @enderror
-                            </div>
-            
-                            <div class="col-md-2 ms-4">
-                              <label for="cantidad" class="form-label text-light">Cantidad</label>
-                              <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad"  required name="cantidad" min="0">
-                              @error('cantidad')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                              @enderror
-                            </div>
-            
-                            <div class="col-md-2 ms-4">
-                              <label for="precio" class="form-label text-light">Precio</label>
-                              <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio"  min="0" name="precio">
-                              @error('precio')
-                                <div class="alert alert-danger">{{ $message }}</div>    
-                              @enderror
-                            </div>
-                          </div>
-            
-                          <div class="input-group mt-3">
-                            <div class="col-md-3">
-                              <label for="categoriaID" class="form-label text-light">Categorias</label>
-                              <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()">
-                                <option selected disabled value="">Categorias</option>
-
-                              </select>
-                              @error('categoriaID')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                              @enderror
-                            </div>
-            
-                            <div class="col-md-3 ms-4 ">
-                              <label for="importado" class="form-label text-light">Sub Categoria</label>
-                              <select class="form-select @error('importado') is-invalid @enderror" aria-label="Disabled select example" id="selectimportado" name="importado" disabled>
-                                <option selected>Solo liquidos</option>
-                                <option value="0">Nacionales</option>
-                                <option value="1">Importados</option>
-                                </select>
-                                @error('importado')
-                                  <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                          </div>
-          
-                          <div class="input-group mt-3">
-                            <div class="col-md-8">
-                              <label for="descripcion" class="form-label text-light">Descripcion</label>
-                              <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 me-3">
-                            <div class="col-md-12 border my-3 mx-auto">
-                              <div class="col-md-9 my-3 mx-auto">
-                                <img src="{{asset('img/no-disponible.jpg')}}" class="img-thumbnail">
-                              </div>
-                              <input class="form-control" type="file" id="formFile">
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                
                 <div class="modal-footer color3">
                   <button type="button" class="btn btn-primary">Guardar Cambios</button>
                 </div>
@@ -176,4 +187,7 @@
         {{-- Fin modal editar --}}
         </div>
     </div>
+@endsection
+@section('js_footer')
+    <script src="{{asset('/js/jsProductos.js')}}"></script>
 @endsection

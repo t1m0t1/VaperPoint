@@ -52,7 +52,7 @@ function editProducto(productoID){
 function isImport(){
     let selectCategoria = $("#selectCategoria").val();
     let selectSubCategoria = $("#selectImportado");
-    if(selectCategoria == 1){
+    if(selectCategoria == 3){
         selectSubCategoria.attr('disabled', false)
     } else {
         selectSubCategoria.attr('disabled', true)

@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Producto;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class ProductoController extends Controller
 {
@@ -17,7 +20,7 @@ class ProductoController extends Controller
          TODO Abel
          - Buscador por nombre y descripcion. ✓
          - filtros por categoria y ordenar por precio de mayor a menor .✓
-         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.✓
+         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.
          */
 
         /* $productos = Producto::orderBy('Nombre')->paginate(10); */
@@ -88,6 +91,7 @@ class ProductoController extends Controller
         $producto->Nombre = $validated['Nombre'];
         $producto->Cantidad = $validated['Cantidad'];
         $producto->Precio = $validated['Precio'];
+        $producto->Descripcion = $validated['Descripcion'];
         $producto->CategoriaID = $validated['CategoriaID'];
         $producto->Importado = $validated['Importado'] ?? null;
 
@@ -116,18 +120,51 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Producto $producto)
+    public function edit($ProductoID)
     {
+        try {
+            $producto = Producto::find($ProductoID);
+        } catch (Exception $e) {
+            Log::info('ProductoController function edit');
+            Log::info('Error: '+ $e);
+            //throw $th;
+        }
         $categorias = Categoria::all();
-        return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]);
+        return response($producto, 200);
+        /* return view('configuracion.producto.producto.productoModificar', ['categorias'=>$categorias]); */
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, $productoId)
     {
-        //
+        $validated = $request->validate([
+            'Nombre' => 'required|max:100|min:3',
+            'Cantidad' => 'required|max:3',
+            'Precio' => 'required',
+            'Descripcion' => 'nullable|max:500',
+            'CategoriaID' => 'required',
+            'Importado' => 'nullable',
+            'Imagen' => 'nullable|image|mime:jpg,jpeg,png'
+        ]);
+        try {
+            DB::beginTransaction();
+            $producto = Producto::find($productoId);
+            $producto->Nombre = $validated['Nombre'];
+            $producto->Cantidad = $validated['Cantidad'];
+            $producto->Precio = $validated['Precio'];
+            $producto->Descripcion = $validated['Descripcion'];
+            $producto->CategoriaID = $validated['CategoriaID'];
+            $producto->Importado = $validated['Importado'] ?? null;
+            $producto->save();
+            DB::commit();
+        } catch (Exception $e) {
+            Log::info('ProductoController function update');
+            Log::info('Error: '+ $e);
+            DB::rollBack();
+        }
+        return response('Producto Editado Correctamente', 200);
     }
 
     /**
