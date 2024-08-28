@@ -776,3 +776,6 @@ html, body {
     font-size: 13px;
     color: #fff;
   }
+  #descripcionProducto{
+    max-width: 250px;
+  }

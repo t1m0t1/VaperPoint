@@ -33,6 +33,7 @@ Route::prefix('/configuracion')->group(function () {
     Route::prefix('/producto')->group(function (){
         Route::controller(ProductoController::class)->group(function () {
             Route::get('/listar', 'index')->name('productoIndex');
+            Route::get('/show/{ProductoID}', 'show')->name('productoShow');
         
             Route::get('/alta', 'create')->name('productoCreate');
             Route::post('/alta', 'store')->name('productoStore');

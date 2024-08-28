@@ -30,7 +30,7 @@
             <table class="table table-bordered  table-primary table-hover table-sm">
                 <thead>
                     <tr class="text-center">
-                        {{-- <th></th> --}}
+                        <th>Imagen</th> 
                         <th>Nombre</th>
                         <th>Categoria</th>
                         <th>Precio</th>
@@ -43,17 +43,18 @@
     
                     @forelse ($productos as $producto)
                         <tr>
-  {{--                           <td class="text-center">
-                                @if(Storage::exists('./images/productos/mods/' .$producto->Imagen))
-                                    <img class="td-image" src="{{ asset('./images/productos/mods/' . $producto->Imagen) }}"
-                                        alt="">
-                                @endif
-                            </td> --}}
+                          <td class="text-center">
+                            @if($producto->Imagen && Storage::exists('public/'.$producto->Imagen))
+                              <img class="td-image" src="{{ asset('storage/'.$producto->Imagen) }}" alt=""> 
+                            @else
+                              <img class="td-image" src="{{ asset('img/no-disponible.jpg') }}" alt="">  
+                            @endif
+                            </td>
                             <td class="text-center">{{ $producto->Nombre }}</td>
                             <td class="text-center">{{ $producto->categoria->Nombre ?? '--' }}</td>
                             <td class="text-center">${{ $producto->Precio ?? '--' }}</td>
                             <td class="text-center">{{ $producto->Cantidad ?? '--' }}</td>
-                            <td class="text-center col-auto text-truncate" style="max-width: 450px;">{{ $producto->Descripcion ?? '--' }} </td>
+                            <td class="text-center col-auto" id="descripcionProducto"><p class="text-truncate">{{ $producto->Descripcion ?? '--' }}</p></td>
                             <td>
                                 <div class="d-flex justify-content-center mx-2">
                                     <a onclick="abrirModalEditarProducto({{$producto->ProductoID}})" class="btn btn-primary rounded-circle me-3">
@@ -92,45 +93,47 @@
                   <div class="col-md-12 d-grid">
                     <div class="row ms-5">
                       <div class="col-md-7">
+                        <ul id="ulErrors">
+                        </ul>
                         <div class="input-group mt-3">
                           <div class="col-md-4">
-                            <label for="nombre" class="form-label text-light">Nombre</label>
-                            <input type="text" class="form-control @error('nombre') is-invalid @enderror"  name="nombre" id="nombre">
+                            <label for="nombre" class="form-label text-light">Nombre(*)</label>
+                            <input type="text" class="form-control @error('nombre') is-invalid @enderror"  name="nombre" id="nombre" required>
                             <input type="text" id="productoID" hidden>
-                            @error('nombre')
+                            {{-- @error('nombre')
                               <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
+                            @enderror --}}
                           </div>
           
                           <div class="col-md-2 ms-4">
-                            <label for="cantidad" class="form-label text-light">Cantidad</label>
-                            <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad"  required name="cantidad" min="0">
-                            @error('cantidad')
+                            <label for="cantidad" class="form-label text-light">Cantidad(*)</label>
+                            <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad" required name="cantidad" min="0">
+                            {{-- @error('cantidad')
                               <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
+                            @enderror --}}
                           </div>
           
                           <div class="col-md-2 ms-4">
-                            <label for="precio" class="form-label text-light">Precio</label>
-                            <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio"  min="0" name="precio">
-                            @error('precio')
+                            <label for="precio" class="form-label text-light">Precio(*)</label>
+                            <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio" min="0" name="precio" required>
+                            {{-- @error('precio')
                               <div class="alert alert-danger">{{ $message }}</div>    
-                            @enderror
+                            @enderror --}}
                           </div>
                         </div>
           
                         <div class="input-group mt-3">
                           <div class="col-md-3">
-                            <label for="categoriaID" class="form-label text-light">Categorias</label>
-                            <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()">
+                            <label for="categoriaID" class="form-label text-light">Categorias(*)</label>
+                            <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()" required>
                               <option selected disabled value="">Categorias</option>
                               @foreach ($categorias as $categoria)
                               <option value="{{$categoria->CategoriaID}}">{{$categoria->Nombre}}</option>
                               @endforeach
                             </select>
-                            @error('categoriaID')
+                            {{-- @error('categoriaID')
                               <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
+                            @enderror --}}
                           </div>
           
                           <div class="col-md-3 ms-4 ">
@@ -140,9 +143,9 @@
                               <option value="0">Nacionales</option>
                               <option value="1">Importados</option>
                               </select>
-                              @error('importado')
+                              {{-- @error('importado')
                                 <div class="alert alert-danger">{{ $message }}</div>
-                              @enderror
+                              @enderror --}}
                           </div>
                         </div>
         
@@ -156,11 +159,13 @@
                       <div class="col-md-4 me-3">
                           <div class="col-md-12 border my-3 mx-auto">
                             <div class="col-md-9 my-3 mx-auto">
-                              <img src="{{asset('img/no-disponible.jpg')}}" class="img-thumbnail">
+                              <img class="img-thumbnail" id="imgSelected">
                             </div>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" id="formFile" onclick="cargarImagen()">
+                            <input type="text" id="imagenAnterior" hidden>
                           </div>
                       </div>
+                      <p class="fw-light text-white">(*)Campos Requeridos</p>
                     </div>
                   </div>
               </div>
