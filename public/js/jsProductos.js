@@ -3,6 +3,7 @@ function cargarImagen(){
     let fileImagen = document.getElementById('formFile');  
     let imgSelectd = document.getElementById('imgSelected');
     let inputImagenAnterior = document.getElementById('imagenAnterior');
+    const match = ["image/jpeg", "image/png", "image/jpg"];
     let rutaImagenAnterior;
 
     if (inputImagenAnterior && inputImagenAnterior.value) {
@@ -13,14 +14,17 @@ function cargarImagen(){
     }
 
     fileImagen.addEventListener('change', e => {
-        if (e.target.files && e.target.files[0]) {
+        let typeFile = e.target.files[0].type;
+        if(!(typeFile == match[0] ||typeFile == match[1] ||typeFile == match[2])){
+            alert('Formato no soportado, Solo: jpeg, jpg, png');
+            imgSelectd.src = 'http://127.0.0.1:8000/img/no-disponible.jpg';
+            fileImagen.value = "";
+        }else{
             let reader = new FileReader();
             reader.onload = function(e) {
                 imgSelectd.src = e.target.result;
             };
             reader.readAsDataURL(e.target.files[0]);
-        } else {
-            imgSelectd.src = rutaImagenAnterior;
         } 
     });
 
