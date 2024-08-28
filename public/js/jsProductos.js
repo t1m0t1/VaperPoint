@@ -34,7 +34,7 @@ function abrirModalCrearProducto(){
     $('#componenteModal').modal('show');
     $('.modal-body :input').val('');
     path = 'http://127.0.0.1:8000/img/no-disponible.jpg'
-    $('#imgSelected').attr('src',path);   
+    $('#imgSelected').attr('src',path);  
 }
 
 function abrirModalEditarProducto(productoID){
@@ -96,7 +96,7 @@ function guardarProducto(){
             $('#spinner').prop('hidden', true);
             location.reload();
             /* TODO: Falta Confirmacion de Producto Guardado */
-        },error: function(res){
+        },error: function(res){            
             mostrarErrores(res);
             $('#botonSave').prop('hidden', false);
             $('#spinner').prop('hidden', true);          
@@ -117,19 +117,27 @@ function isImport(){
 
 /* err es un objeto, muestra los errores devueltos por el controlller*/
 function mostrarErrores(err){
+    resetErrors();
+    errorData = JSON.parse(err.responseText)
     let ulErrors = $('#ulErrors');
-    ulErrors.empty();
+    /* Este if no me gusta pero no encotre otra solucion al momento */
+    if(errorData.message.includes('CategoriaID')){
+        $('#selectCategoria').addClass('border border-danger');
+        let li = $('<li></li>').text('La Categoria es Requerida');
+        li.addClass('text-danger');
+        ulErrors.append(li);
+    }
     let errors = err.responseJSON.errors;
     for (let field in errors) {
         if (errors.hasOwnProperty(field)) {
         errors[field].forEach(error => {
-            field = field.toLowerCase();
+            field = field.toLowerCase();            
             if(field == 'categoriaid'){
                 $('#selectCategoria').addClass('border border-danger');
             }
             let li = $('<li></li>').text(error);
             li.addClass('text-danger');
-                ulErrors.append(li);
+            ulErrors.append(li);
             });
             let inputField = $('#' + field);
             if (inputField.length) {
@@ -161,3 +169,4 @@ function resetErrors(){
     $('input').removeClass('border border-danger');
     $('select').removeClass('border border-danger');
 }
+

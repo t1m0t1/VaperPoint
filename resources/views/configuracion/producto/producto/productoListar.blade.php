@@ -125,11 +125,12 @@
                         <div class="input-group mt-3">
                           <div class="col-md-3">
                             <label for="categoriaID" class="form-label text-light">Categorias(*)</label>
-                            <select class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()" required>
+                            <select required class="form-select @error('categoriaID') is-invalid @enderror" id="selectCategoria" name="categoriaID" onchange="isImport()">
                               <option selected disabled value="">Categorias</option>
                               @foreach ($categorias as $categoria)
                               <option value="{{$categoria->CategoriaID}}">{{$categoria->Nombre}}</option>
                               @endforeach
+                              {{-- TODO: Agregar forma de ir a cargar nueva categoria --}}
                             </select>
                             {{-- @error('categoriaID')
                               <div class="alert alert-danger">{{ $message }}</div>

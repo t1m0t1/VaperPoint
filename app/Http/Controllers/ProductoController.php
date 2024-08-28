@@ -147,7 +147,6 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $productoId)
     {
-        
         $validated = $request->validate([
             'Nombre' => 'required|max:100|min:3',
             'Cantidad' => 'required|max:3',
