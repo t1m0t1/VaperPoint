@@ -55,7 +55,8 @@ function abrirModalEditarProducto(productoID){
 }
 function guardarProducto(){
     /* TODO:Hacer un spinner */
-    $('#botonSave').prop('disabled', true); 
+    $('#botonSave').prop('hidden', true); 
+    $('#spinner').prop('hidden', false);
     $.ajaxSetup({
         headers:
         { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
@@ -91,11 +92,14 @@ function guardarProducto(){
         data: formData,
         success: function (response) {
             $('#componenteModal').modal('hide');
-            $('#botonSave').prop('disabled', false);
+            $('#botonSave').prop('hidden', false);
+            $('#spinner').prop('hidden', true);
             location.reload();
             /* TODO: Falta Confirmacion de Producto Guardado */
         },error: function(res){
-            mostrarErrores(res);          
+            mostrarErrores(res);
+            $('#botonSave').prop('hidden', false);
+            $('#spinner').prop('hidden', true);          
         }
     });
 }

@@ -172,6 +172,9 @@
             @endslot
             @slot('botonSave')
               <button type="button" class="btn btn-primary" id="botonSave" onclick="guardarProducto()"></button>
+              <div class="spinner-border text-primary" role="status" hidden id="spinner">
+                <span class="visually-hidden"></span>
+              </div>
             @endslot
         @endcomponent
 
