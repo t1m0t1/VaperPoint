@@ -4,7 +4,7 @@
 .color4 {background-color: #99a2e7;}
 .color5 {background-color: #dbe3ed;}
 
-main, body{
+main, .fondo-gradient{
   background-size: cover;
   background-position: center;
   background: rgb(5,139,203);

@@ -20,7 +20,7 @@
         
         @livewireStyles
     </head>
-    <body>
+    <body class="fondo-gradient">
         <header id="header" class="fixed-top ">
                 <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
