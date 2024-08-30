@@ -14,7 +14,10 @@ class Categoria extends Model
 
     protected $table = 'Categoria';
     protected $primaryKey = 'CategoriaID';
-    protected $fillable = ['nombre'];
+    protected $fillable = 
+    [
+        'Nombre'
+    ];
 
     public function productos(): HasMany
     {

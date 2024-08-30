@@ -1,4 +1,4 @@
-@extends('layouts.default')
+  @extends('layouts.default')
 
 @section('contenido')
     <div class="container-sm color2 shadow-lg border mt-5">
@@ -19,7 +19,7 @@
                       <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
-    
+                    {{--TODO ABEL No mantiene valor arnterior una vez se envian los datos --}}
                     <div class="col-md-3 ms-3">
                       <label for="Cantidad" class="form-label text-light">Cantidad <i class="bi bi-braces-asterisk"></i></label>
                       <input type="number" class="form-control  @error('Cantidad') is-invalid @enderror" id="Cantidad" value="Cantidad" name="Cantidad" min="0" >
@@ -27,7 +27,7 @@
                       <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
-    
+                    {{--TODO ABEL No mantiene valor arnterior una vez se envian los datos --}}
                     <div class="col-md-3 ms-3">
                       <label for="Precio" class="form-label text-light">Precio <i class="bi bi-braces-asterisk"></i></label>
                       <input type="number" class="form-control  @error('Precio') is-invalid @enderror" id="Precio" value="Precio" min="0" name="Precio">
@@ -36,12 +36,12 @@
                       @enderror
                     </div>
                   </div>
-    
+                    {{--TODO ABEL No mantiene valor arnterior una vez se envian los datos --}}    
                   <div class="input-group mt-4">
                     <div class="col-md-3">
                       <label for="CategoriaID" class="form-label text-light">Categorias <i class="bi bi-braces-asterisk"></i></label>
                       <select class="form-select @error('CategoriaID') is-invalid @enderror" id="selectCategoria" name="CategoriaID" onchange="isImport()">
-                        <option selected disabled value="">Categorias</option>
+                        <option selected value="">Categorias</option>
                         @foreach ($categorias as $categoria)    
                         <option value="{{$categoria->CategoriaID}}" >{{$categoria->Nombre}}</option>
                         @endforeach
@@ -50,11 +50,11 @@
                         <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
-    
+                    {{--TODO ABEL No mantiene valor arnterior una vez se envian los datos --}}    
                     <div class="col-md-3 ms-4 ">
                       <label for="Importado" class="form-label text-light">Sub Categoria</label>
-                      <select class="form-select @error('Importado') is-invalid @enderror" aria-label="Disabled select example" id="selectImportado" name="Importado" disabled>
-                        <option selected>Solo liquidos</option>
+                      <select class="form-select @error('Importado') is-invalid @enderror" id="selectImportado" name="Importado">
+                        <option value="" selected>Solo liquidos</option>
                         <option value="0">Nacionales</option>
                         <option value="1">Importados</option>
                         </select>
@@ -63,16 +63,16 @@
                         @enderror
                     </div>
                   </div>
-  
+                    {{-- No mantiene valor arnterior una vez se envian los datos --}}  
                   <div class="input-group mt-4">
                     <div class="col-md-10">
-                      <label for="descripcion" class="form-label text-light">Descripcion</label>
+                      <label for="Descripcion" class="form-label text-light">Descripcion</label>
                       <textarea class="form-control" id="Descripcion" name="Descripcion"></textarea>
                     </div>
                   </div>
 
                 </div>
-
+                    {{--TODO ABEL No mantiene valor arnterior una vez se envian los datos --}}
                 <div class="col-md-4 me-3 mb-5">
                     <div class="col-md-12 border my-3 mx-auto">
                       <div class="col-md-9 my-3 mx-auto">

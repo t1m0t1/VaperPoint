@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Vaper Point | Home</title>
 
@@ -11,19 +12,17 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <!-- Styles -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <link href="{{asset('./css/style.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <script src="{{asset('./js/jquery.js')}}"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
         @livewireStyles
     </head>
-    <body style="background-image: url({{asset('./img/background.jpg')}});
-    background-size: cover;">
+    <body class="fondo-gradient">
         <header id="header" class="fixed-top ">
-                <div class="container d-flex align-items-center justify-content-lg-between vapor">
-        
-                  <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Vaper<span>Point</span></a></h1> -->
+                <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <a href="/" class="logo me-auto me-lg-0"><img src="{{asset('./img/logo-fondo-png.png')}}" alt="" class="img-fluid"></a>
          
@@ -73,7 +72,7 @@
                   <!-- .navbar -->
                 </div>
         </header>
-        <main class="d-flex align-items-center justify-content-center mt-5">
+        <main class="d-flex align-items-center justify-content-center pt-5">
             
             @yield('contenido')
             

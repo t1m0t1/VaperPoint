@@ -82,14 +82,14 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        @foreach ($categorias as $c)
+      @foreach ($categorias as $c)
         <div class="col-xl-4 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="/catalogo/{{$c->CategoriaID}}">{{$c->Nombre}}</a></h3>
           </div>
         </div>    
-        @endforeach
+      @endforeach
       </div>
 
     </div>

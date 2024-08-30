@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('Descripcion')->nullable();
             $table->string('Imagen')->nullable();
             $table->float('Precio')->nullable();
-            $table->foreignId('SubCategoriaID')->references('SubCategoriaID')->on('SubCategoria');
+            $table->boolean('Importado')->nullable();
             $table->foreignId('CategoriaID')->references('CategoriaID')->on('Categoria');
             $table->timestamps();
             $table->softDeletes();
