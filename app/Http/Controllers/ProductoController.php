@@ -25,7 +25,6 @@ class ProductoController extends Controller
          - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.✓
          */
 
-        /* $productos = Producto::orderBy('Nombre')->paginate(10); */
         $productos = Producto::query();
         if($request->categoriaBuscada != null){
            $productos = $productos->where('CategoriaID', $request->categoriaBuscada);
@@ -37,17 +36,15 @@ class ProductoController extends Controller
             $productos = $productos->where('Nombre', 'LIKE', '%'.$request->productoBuscado.'%')->orWhere('Descripcion', 'LIKE', '%'.$request->productoBuscado.'%');
         }
         $categorias = Categoria::orderBy('Nombre')->get();
-
+        
         $productos = $productos->paginate(10);
         $productos->appends([
             'productoBuscado' => $request->productoBuscado,
             'categoriaBuscada' => $request->categoriaBuscada,
             'filtroPrecios' => $request->filtroPrecios
         ]);
-        /* dd($productos); */
 
-
-        return view('configuracion.producto.producto.productoListar', 
+        return view('configuracion.producto.productoListar', 
         [
             'productos' => $productos,
             'categorias' => $categorias,
