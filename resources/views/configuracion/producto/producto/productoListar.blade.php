@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('contenido')
     <div class="container color2 shadow-lg border mt-5">
-      <a role="button" class="nav-link scrollto" href="{{route('desconectarUsuario')}}">Salir</a>
+      <a role="button" class="btn btn-danger m-3" href="{{route('desconectarUsuario')}}">Salir</a>
 
         <div class="row mb-3 color3">
             <h5 class="text-start text-light m-1">Listado de Productos</h5>
