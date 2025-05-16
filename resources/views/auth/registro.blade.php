@@ -1,8 +1,8 @@
 @extends('layouts.default')
 
 @section('contenido')
-<div class="container">
-        <div class="card mb-5 mt-5">
+<div class="container col-6 px-3">
+        <div class="card py-4">
             <h3 class="text-center">Registro</h3>
             @if($errors->any())
                 <div class="d-flex justify-content-center">
@@ -14,27 +14,27 @@
                     </ul>
                 </div>
             @endif
-            <div class="d-flex justify-content-center">
-                <form action="{{route('guardarUsuario')}}" method="POST">
+            <div class="w-full">
+                <form action="{{route('guardarUsuario')}}" method="POST" class="d-flex flex-column">
                     @csrf
-                    <div class="row">
-                        <label for="">Nombre Usuario</label>
-                        <input type="text" name="userName">
+                    <div class="d-flex flex-column justify-items-center aling-items-center">
+                        <label for="" class="align-self-center">Nombre Usuario</label>
+                        <input type="text" name="userName" class="align-self-center col-10">
                     </div>
-                    <div class="row">
-                        <label for="">Nombre</label>
-                        <input type="text" name="nombre">
-                        <label for="">Apellido</label>
-                        <input type="text" name="apellido">
+                    <div class="d-flex flex-column">
+                        <label for="" class="align-self-center">Nombre</label>
+                        <input type="text" name="nombre" class="align-self-center col-10">
+                        <label for="" class="align-self-center">Apellido</label>
+                        <input type="text" name="apellido" class="align-self-center col-10">
                     </div>
-                    <div class="row">
-                        <label for="">Contraseña</label>
-                        <input type="password" name="password">
-                        <label for="">Repetir Contraseña</label>
-                        <input type="password">
+                    <div class="d-flex flex-column">
+                        <label for="" class="align-self-center">Contraseña</label>
+                        <input type="password" name="password" class="align-self-center col-10">
+                        <label for="" class="align-self-center">Repetir Contraseña</label>
+                        <input type="password" class="align-self-center col-10">
                     </div>
                     <div>
-                        <button>Registrarse</button>
+                        <button class="col-4 align-self-center mt-3">Registrarse</button>
                     </div>
                 </form>
             </div>

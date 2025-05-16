@@ -1,8 +1,7 @@
 @extends('layouts.default')
 @section('contenido')
-    <div class="container color2 shadow-lg border mt-5">
-      <a role="button" class="btn btn-danger m-3" href="{{route('desconectarUsuario')}}">Salir</a>
 
+  <div class="container color2 shadow-lg border">
         <div class="row mb-3 color3">
             <h5 class="text-start text-light m-1">Listado de Productos</h5>
         </div>
@@ -181,7 +180,7 @@
             @endslot
         @endcomponent
 
-        <div class="modal fade show" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      {{--   <div class="modal fade show" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
               <div class="modal-content">
                 <div class="modal-header color3">
@@ -194,9 +193,10 @@
                   <button type="button" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{-- Fin modal editar --}}
         </div>
+        
     </div>
 @endsection
 @section('js_footer')

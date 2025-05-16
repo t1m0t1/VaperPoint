@@ -32,7 +32,7 @@ class RegistroController extends Controller
         $user->save();
 
         Auth::login($user);
-        return redirect(route('productoIndex'));
+        return redirect(route('home'));
     }
 
     public function validarIngresoUsuario(Request $request)
@@ -46,9 +46,9 @@ class RegistroController extends Controller
 
         if(Auth::attempt($credenciales)){
             $request->session()->regenerate();
-            return redirect(route('productoIndex'));
+            return redirect(route('home'));
         }else{
-            return redirect(route('login'));
+            return redirect(route('login'))->with('error', 'Usuario o Contraseña Incorrectos');
         }
 
     }

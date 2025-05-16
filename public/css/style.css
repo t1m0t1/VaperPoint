@@ -781,6 +781,10 @@ html, body {
     background: rgb(246,246,246);
     background: radial-gradient(circle, rgba(246,246,246,1) 0%, rgb(234, 234, 235) 100%);
   }
+  
+  .glass0 {
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .7);
+  }
 
   #descripcionProducto{
     max-width: 250px;
