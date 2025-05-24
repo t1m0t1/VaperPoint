@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentaController;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
@@ -21,24 +22,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $productos = Producto::orderBy('Descripcion')->paginate(10);
     $categorias = Categoria::orderBy('Nombre')->get(); 
-    return view('welcome')->with(['productos' => $productos ,'categorias'=>$categorias]);
+    return view('welcome')->with(['productos' => $productos ,'categorias' => $categorias]);
 });
 
 /* Route::prefix('/catalogo')->group(function () { */
     Route::get('/catalogo/{CategoriaID}', [ProductoController::class,'catalogo']);
 /* }); */
-
 Route::prefix('/configuracion')->group(function () {
     
     Route::prefix('/producto')->group(function (){
         Route::controller(ProductoController::class)->group(function () {
             Route::get('/listar', 'index')->name('productoIndex');
+            Route::get('/show/{ProductoID}', 'show')->name('productoShow');
         
             Route::get('/alta', 'create')->name('productoCreate');
             Route::post('/alta', 'store')->name('productoStore');
         
             Route::get('/modificar/{ProductoID}', 'edit')->name('productoEdit');
-            Route::put('/modificar/{ProductoID}', 'update')->name('productoUpdate');
+            Route::post('/modificar/{ProductoID}', 'update')->name('productoUpdate');
         
             Route::delete('/baja/{ProductoID}', 'destroy')->name('productoDestroy');
 
@@ -60,3 +61,16 @@ Route::prefix('/configuracion')->group(function () {
         });
     });
 });
+/* Fin de Categoria */
+/* Comienzo de Venta */
+Route::prefix('/venta')->group(function (){
+    Route::controller(VentaController::class)->group(function () {
+        Route::get('/listar', 'index')->name('VentaIndex');
+        Route::get('/alta', 'nuevaVenta')->name('nuevaVenta');
+        Route::post('/alta', 'generarVenta')->name('generarVenta');
+        Route::get('/modificar', 'modificarVenta')->name('modificarVenta');
+        Route::put('/modificar', 'guardarModificacioines')->name('guardarModificacioines');
+        Route::put('/baja', 'eliminarVenta')->name('eliminarVenta');
+    });
+});
+/* Fin de Venta */

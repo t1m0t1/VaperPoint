@@ -4,6 +4,12 @@
 .color4 {background-color: #99a2e7;}
 .color5 {background-color: #dbe3ed;}
 
+main, .fondo-gradient{
+  background-size: cover;
+  background-position: center;
+  background: rgb(5,139,203);
+  background: linear-gradient(0deg, rgb(2, 86, 126) 17%, rgb(52, 29, 153) 97%);
+}
 
 .td-image{
   height: 3em;
@@ -259,12 +265,6 @@ html, body {
     top: 0;
     left: 100%;
     visibility: visible;
-  }
-  
-  .vapor{
-    background-image: url("../img/humo3.png");
-    background-size: cover;
-    background-position: center;
   }
 
   @media (max-width: 1366px) {
@@ -775,4 +775,30 @@ html, body {
     text-align: center;
     font-size: 13px;
     color: #fff;
+  }
+
+  .bg-card{
+    background: rgb(246,246,246);
+    background: radial-gradient(circle, rgba(246,246,246,1) 0%, rgb(234, 234, 235) 100%);
+  }
+
+  #descripcionProducto{
+    max-width: 250px;
+  }
+  .spinner{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border-left: #09f;
+    animation: spin 1s ease infinite;
+  }
+
+  @keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
   }

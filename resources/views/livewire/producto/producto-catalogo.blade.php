@@ -1,9 +1,9 @@
 <section>
     <div class="container mt-4">
-        <div class="row row-cols-3 row-cols-md-5 g-4">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
             @foreach ($productos as $p)
-                <div class="col-6">
-                    <div class=" card">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-card">
                         <div class="text-end">
                             @if ($p->Cantidad > 0)
                                 <p class="fs-6 text-primary me-1"><strong>Disponible</strong></p>

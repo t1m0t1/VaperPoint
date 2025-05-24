@@ -16,13 +16,14 @@ class Producto extends Model
 
     protected $table = 'Producto';
     protected $primaryKey = 'ProductoID';
-    protected $fillable = [
-        'nombre',
-        'precio',
-        'cantidad',
-        'imagen',
-        'categoriaID',
-        'descripcion',
+    protected $fillable = 
+    [
+        'Nombre',
+        'Precio',
+        'Cantidad',
+        'Imagen',
+        'CategoriaID',
+        'Descripcion',
     ];
 
     public function categoria(): BelongsTo

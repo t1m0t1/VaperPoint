@@ -1,4 +1,4 @@
-  @extends('layouts.default')
+@extends('layouts.default')
 
 @section('contenido')
     <div class="container-sm color2 shadow-lg border mt-5">
