@@ -25,7 +25,6 @@ class ProductoController extends Controller
          - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.✓
          */
 
-        /* $productos = Producto::orderBy('Nombre')->paginate(10); */
         $productos = Producto::query();
         if($request->categoriaBuscada != null){
            $productos = $productos->where('CategoriaID', $request->categoriaBuscada);
@@ -37,17 +36,15 @@ class ProductoController extends Controller
             $productos = $productos->where('Nombre', 'LIKE', '%'.$request->productoBuscado.'%')->orWhere('Descripcion', 'LIKE', '%'.$request->productoBuscado.'%');
         }
         $categorias = Categoria::orderBy('Nombre')->get();
-
+        
         $productos = $productos->paginate(10);
         $productos->appends([
             'productoBuscado' => $request->productoBuscado,
             'categoriaBuscada' => $request->categoriaBuscada,
             'filtroPrecios' => $request->filtroPrecios
         ]);
-        /* dd($productos); */
 
-
-        return view('configuracion.producto.producto.productoListar', 
+        return view('configuracion.producto.productoListar', 
         [
             'productos' => $productos,
             'categorias' => $categorias,
@@ -72,7 +69,7 @@ class ProductoController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-        return view('configuracion.producto.producto.productoAlta', ['categorias'=>$categorias]);
+        return view('configuracion.producto.productoAlta', ['categorias'=>$categorias]);
     }
 
     /**
@@ -125,12 +122,14 @@ class ProductoController extends Controller
         try {
             $producto = Producto::find($ProductoID);
             $producto->categoriaNombre = $producto->categoria->Nombre;
+            return response($producto, 200);
         } catch (Exception $e) {
-            Log::info('ProductoController function edit');
-            Log::info('Error: '+ $e);
-            //throw $th;
+            Log::info('<<<< ERROR Controllers\ProductoController.php@show >>>>');
+            Log::error($e->getMessage());
+            Log::error($e->getTrace());
+            Log::info('<<<< FIN ERROR Controllers\ProductoController.php@show >>>>');
+            return response('Error metodo show', 500);
         }
-        return response($producto, 200);
     }
 
     /**
