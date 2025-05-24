@@ -66,6 +66,11 @@ Route::prefix('/configuracion')->group(function () {
 Route::prefix('/venta')->group(function (){
     Route::controller(VentaController::class)->group(function () {
         Route::get('/listar', 'index')->name('VentaIndex');
+        Route::get('/alta', 'nuevaVenta')->name('nuevaVenta');
+        Route::post('/alta', 'generarVenta')->name('generarVenta');
+        Route::get('/modificar', 'modificarVenta')->name('modificarVenta');
+        Route::put('/modificar', 'guardarModificacioines')->name('guardarModificacioines');
+        Route::put('/baja', 'eliminarVenta')->name('eliminarVenta');
     });
 });
 /* Fin de Venta */

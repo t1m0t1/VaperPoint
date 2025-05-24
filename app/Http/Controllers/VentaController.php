@@ -4,63 +4,71 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use App\Models\Venta;
+use App\Models\VentaHistorico;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VentaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         $ventas = Venta::orderBy("FechaVenta")->paginate(10);
         return view('venta.ventaListar', ["ventas" => $ventas]);
     }
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+    
+    public function nuevaVenta(){
+        $productos = Producto::select(['ProductoID', 'Nombre', 'Cantidad', 'CategoriaID', 'Imagen', 'Precio'])->where('Cantidad','>', 0)->orderBy("Nombre")->with('categoria')->get();
+
+        return view('venta.ventaAlta', ["productos" => $productos]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    public function generarVenta(Request $request){
+        $validated = $request->validate(
+        [
+            "productos" => 'nullable',
+            "montoTotal" => 'required|numeric|min:1',
+        ]);
+        
+        $arrayProductos = json_decode($validated['productos']);
+        try {
+            DB::beginTransaction();
+            $nuevaVenta = Venta::create([
+                "MontoTotal" => $validated['montoTotal'],
+                "FechaVenta" => Carbon::now(),
+                "ClienteID" => $validated['ClienteID'] ?? null,
+            ]);
+
+            foreach ($arrayProductos as $producto) {
+                VentaHistorico::create([
+                    "VentaID" => $nuevaVenta->VentaID,
+                    "ProductoID" => $producto->ItemVentaID,
+                    "Cantidad" => $producto->Cantidad,
+                    "Precio" => $producto->Precio,
+                ]);
+            }
+            DB::commit();
+            return redirect('/venta/listar');
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            dd($ex);
+        }
+
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+    public function modificarVenta(Request $request, int $ventaID){
+        $venta = Venta::find($ventaID)->with('ventaDetalles');
+        $productos = Producto::orderBy("Nombre")->paginate(10);
+        return view('venta.ventaModificar', ["productos" => $productos]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    public function guardarModificacioines(Request $request){
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+    public function eliminarVenta(int $ventaID){
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

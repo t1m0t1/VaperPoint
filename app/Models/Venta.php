@@ -13,6 +13,7 @@ class Venta extends Model
 
     protected $table = 'Venta';
     protected $primaryKey = 'VentaID';
+    protected $fillable = ["MontoTotal","FechaVenta","ClienteID"];
     
 
 }

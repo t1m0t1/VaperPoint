@@ -13,4 +13,10 @@ class VentaHistorico extends Model
 
     protected $table = 'VentaHistorico';
     protected $primaryKey = 'VentaHistoricoID';
+    protected $fillable = [
+        "VentaID",
+        "ProductoID",
+        "Cantidad",
+        "Precio",
+    ];
 }

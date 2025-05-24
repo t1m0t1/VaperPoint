@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('Venta', function (Blueprint $table) {
             $table->id('VentaID');
-            $table->float('MontoTotal');
-            $table->bigInteger('CantidadTotal');
-            $table->date('FechaVenta');
+            $table->float('MontoTotal', 24, 4)->nullable()->nullable();
+            $table->dateTime('FechaVenta')->nullable()->nullable();
+
+            $table->unsignedBigInteger('ClienteID')->nullable();
+            $table->foreign('ClienteID')->references('ClienteID')->on('Cliente');
+            
             $table->timestamps();
             $table->softDeletes();
         });

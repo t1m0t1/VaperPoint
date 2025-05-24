@@ -17,9 +17,14 @@
         <link href="{{asset('./css/style.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <script src="{{asset('./js/jquery.js')}}"></script>
+        {{-- CDN Select2 --}}
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        @yield('js_top')
+        
 </head>
     <body class="fondo-gradient">
-        <header id="header" class="fixed-top ">
+        {{-- <header id="header" class="fixed-top ">
                 <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <a href="/" class="logo me-auto me-lg-0"><img src="{{asset('./img/logo-fondo-png.png')}}" alt="" class="img-fluid"></a>
@@ -69,14 +74,19 @@
                   </nav>
                   <!-- .navbar -->
                 </div>
-        </header>
+        </header> --}}
         <main class="d-flex align-items-center justify-content-center pt-5 h-100">
             
-            @yield('contenido')
+        @yield('contenido')
             
             
         </main>
         @yield('js_footer')
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
+        <script>
+          $(document).ready(function() {
+              $('.select2').select2();
+          });
+        </script>
     </body>
 </html>

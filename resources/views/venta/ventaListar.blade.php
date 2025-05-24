@@ -8,27 +8,25 @@
         </div>
       
         <div class="d-grid d-md-flex justify-content-md-end mb-3">
-            <a onclick="Livewire.emit('mostrarModal')" class="btn btn-success bi bi-plus"> Nueva Venta</a>
+            <a href="/venta/alta" class="btn btn-success bi bi-plus">Nueva Venta</a>
         </div>
 
       <table class="table table-bordered  table-primary table-hover">
           <thead class="grid">
-            <tr class="text-center">
-                <th scope="col"></th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Acciones</th>
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Cliente</th>
+                <th scope="col" class="text-end">Monto Total</th>
+                <th scope="col" class="text-center">Acciones</th>
             </tr>
           </thead>
         <tbody>      
               @forelse ($ventas as $venta)
                   <tr>
-                      <td class="text-center">
-                          {{$venta->FechaVenta}}
-                      </td>>   
+                      <td>{{$venta->FechaVenta}}</td>   
+                      <td>{{$venta->ClienteID ?? "Consumidor final"}}</td>   
+                      <td class="text-end">$ {{number_format($venta->MontoTotal, 2, ',', ' ')}}</td>   
+                      <td></td>   
                   </tr>
               @empty
               <tr>
@@ -38,5 +36,4 @@
         </tbody>
      </table>
 </div>
-@livewire('venta.venta-nueva')
 @endsection
