@@ -27,15 +27,17 @@ Route::get('/', function () {
 
 Route::view('/ingreso', 'usuarios.login')->name('login');
 
-/* Route::prefix('/catalogo')->group(function () { */
-    Route::get('/catalogo/{CategoriaID}', [ProductoController::class,'catalogo']);
-/* }); */
-Route::post('validarIngresoUsuario', [RegistroController::class, 'validarIngresoUsuario'])->name('validarIngreso');
+Route::get('/catalogo/{CategoriaID}', [ProductoController::class,'catalogo']);
+Route::post('validarIngresoUsuario', [RegistroController::class, 'validarIngresoUsuario'])->name('validarIngreso')->middleware('throttle:6,1');
 Route::get('/registro', [RegistroController::class, 'crearUsuario'])->name('crearUsuario');
 Route::post('/registro', [RegistroController::class, 'guardarUsuario'])->name('guardarUsuario');
 Route::get('/desconectar', [RegistroController::class, 'desconectarUsuario'])->name('desconectarUsuario');
 
 Route::middleware('auth')->group(function(){
+    Route::view('/home', 'auth.home')->name('home');
+
+    Route::get('changePasswordform', [RegistroController::class, 'changePasswordform'])->name('changePasswordform');
+    Route::post('changePasswordform', [RegistroController::class, 'changePassword'])->name('changePassword');
 
     Route::prefix('/configuracion')->group(function () {
         

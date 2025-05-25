@@ -21,7 +21,7 @@
         
         @livewireStyles
     </head>
-    <body class="fondo-gradient">
+    <body class="fondo-gradient h-100">
        {{--  <header id="header" class="fixed-top ">
                 <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
@@ -84,7 +84,7 @@
                   <!-- .navbar -->
                 </div>
         </header> --}}
-        <main class="d-flex align-items-center justify-content-center pt-4 w-100 flex-column">
+        <main class="container d-flex align-items-center justify-content-center min-vh-100 flex-column">
           @if(Auth::check())
             @component('componentes.sidebar')
             @endcomponent

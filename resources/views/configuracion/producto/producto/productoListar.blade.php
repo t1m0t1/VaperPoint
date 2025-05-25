@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('contenido')
 
-  <div class="container color2 shadow-lg border">
-        <div class="row mb-3 color3">
+  <div class="container color2 shadow-lg border my-3 h-auto">
+        <div class="row mb-2 color3">
             <h5 class="text-start text-light m-1">Listado de Productos</h5>
         </div>
         <div class="d-flex justify-content-between col-12">
@@ -24,7 +24,7 @@
             </form>
           </div>
           <div class="col-1 ms-5 mt-3 float-end">
-              <a {{-- href="{{ route('productoCreate') }}" --}} onclick="abrirModalCrearProducto()" class="btn btn-success rounded-circle"><i class="bi bi-plus"></i></a>
+              <a onclick="abrirModalCrearProducto()" class="btn btn-success rounded-circle"><i class="bi bi-plus"></i></a>
           </div>
         </div>
         <div class="table-responsive">
@@ -170,7 +170,7 @@
                       <p class="fw-light text-white">(*)Campos Requeridos</p>
                     </div>
                   </div>
-              </div>
+                </div>
             @endslot
             @slot('botonSave')
               <button type="button" class="btn btn-primary" id="botonSave" onclick="guardarProducto()"></button>
@@ -178,26 +178,8 @@
                 <span class="visually-hidden"></span>
               </div>
             @endslot
-        @endcomponent
-
-      {{--   <div class="modal fade show" id="editProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="modal-header color3">
-                  <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Editar Producto</h1>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                
-                
-                <div class="modal-footer color3">
-                  <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                </div>
-            </div>
-        </div> --}}
-        {{-- Fin modal editar --}}
-        </div>
-        
-    </div>
+        @endcomponent      
+  </div>
 @endsection
 @section('js_footer')
     <script src="{{asset('/js/jsProductos.js')}}"></script>

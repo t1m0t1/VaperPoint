@@ -37,7 +37,10 @@ class RegistroController extends Controller
 
     public function validarIngresoUsuario(Request $request)
     {
-        //TODO: validacion de datos
+        $request->validate([
+            'userName' => 'required|string|max:200',
+            'password' => 'required|string'
+        ]);
 
         $credenciales = [
             'userName' => $request->userName,
@@ -47,9 +50,9 @@ class RegistroController extends Controller
         if(Auth::attempt($credenciales)){
             $request->session()->regenerate();
             return redirect(route('home'));
-        }else{
-            return redirect(route('login'))->with('error', 'Usuario o Contraseña Incorrectos');
         }
+
+        return back()->with('error', 'Usuario o Contraseña Incorrectos');    
 
     }
 
@@ -61,5 +64,25 @@ class RegistroController extends Controller
         $request->session()->regenerate();
 
         return redirect('/');
+    }
+
+    public function changePasswordform()
+    {
+        return view('auth.cambiarContraseña');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $user = Auth::user();
+        $request->validate([
+            'current_password' => 'required|string',
+            'new_password' => 'required|string|min:6|max:15|alpha_num|confirmed'
+        ]);
+        if(Hash::check($request->current_password, $user->password)){
+            $user->password = Hash::make($request->new_password);
+            $user->save();
+            return redirect()->route('home')->with('success', 'Contraseña Cambiada Correctamente'); 
+        }
+        return back()->with('error', 'Contraseña Incorrecta');
     }
 }

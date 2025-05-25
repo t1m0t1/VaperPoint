@@ -1,12 +1,22 @@
 @extends('layouts.default')
 
 @section('contenido')
-@if (session( 'error' ))
-    <div class="alert alert-danger" role="alert">
-        {{session( 'error' )}}
-    </div>
-@endif
-<div class="container col-6">
+
+<div class="container col-6 h-100 mt-3">
+    @if (session( 'error' ))
+        <div class="alert alert-danger" role="alert">
+            {{session( 'error' )}}
+        </div>
+    @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="glass0 w-100 py-4 px-3 rounded">
         <h3 class="text-center fw-bold text-white">INGRESO</h3>
         <form action="{{route('validarIngreso')}}" method="POST" class="d-flex flex-column justify-content-center">
