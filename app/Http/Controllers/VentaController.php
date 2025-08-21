@@ -8,6 +8,7 @@ use App\Models\VentaHistorico;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class VentaController extends Controller
 {
@@ -52,7 +53,10 @@ class VentaController extends Controller
             return redirect('/venta/listar');
         } catch (\Exception $ex) {
             DB::rollBack();
-            dd($ex);
+            Log::error("INICIO VentaController@generarVenta");
+            Log::info($ex->getMessage());
+            Log::info($ex->getTrace());
+            Log::error("FIN VentaController@generarVenta");
         }
 
     }
