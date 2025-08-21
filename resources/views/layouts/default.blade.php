@@ -22,14 +22,14 @@
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         @yield('js_top')
-        
+
 </head>
     <body class="fondo-gradient">
         {{-- <header id="header" class="fixed-top ">
                 <div class="container d-flex align-items-center justify-content-lg-between">
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <a href="/" class="logo me-auto me-lg-0"><img src="{{asset('./img/logo-fondo-png.png')}}" alt="" class="img-fluid"></a>
-         
+
                   <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
                       <li><a class="nav-link scrollto active" href="/">Home</a></li>
@@ -64,7 +64,7 @@
                               <li><a href="#">Calibrador de Recistencias</a></li>
                             </ul>
                           </li>
-        
+
                         </ul>
                       </li>
                       <li><a class="nav-link scrollto " href="#portfolio">Servicios</a></li>
@@ -76,9 +76,9 @@
                           <li><a href="#">Cambiar Contraseña</a></li>
                           <li><a href="{{route('desconectarUsuario')}}">Salir</a></li>
                         </ul>
-                      </li>    
-                        
-                      @else  
+                      </li>
+
+                      @else
                         <li><a class="nav-link scrollto" href="{{route('login')}}">Ingresar</a></li>
                       @endif
                     </ul>
@@ -89,13 +89,13 @@
         </header> --}}
         <main class="container d-flex align-items-center justify-content-center min-vh-100 flex-column">
           @if(Auth::check())
-            @component('componentes.sidebar')
-            @endcomponent
+{{--            @component('componentes.sidebar')
+            @endcomponent--}}
           @endif
           @yield('contenido')
         </main>
         @yield('js_footer')
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script>
           $(document).ready(function() {
               $('.select2').select2();

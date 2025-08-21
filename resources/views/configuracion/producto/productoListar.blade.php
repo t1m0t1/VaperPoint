@@ -31,7 +31,7 @@
             <table class="table table-bordered  table-primary table-hover table-sm">
                 <thead>
                     <tr class="text-center">
-                        <th>Imagen</th> 
+                        <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Categoria</th>
                         <th>Precio</th>
@@ -41,14 +41,14 @@
                     </tr>
                 </thead>
                 <tbody>
-    
+
                     @forelse ($productos as $producto)
                         <tr>
                           <td class="text-center">
                             @if($producto->Imagen && Storage::exists('public/'.$producto->Imagen))
-                              <img class="td-image" src="{{ asset('storage/'.$producto->Imagen) }}" alt=""> 
+                              <img class="td-image" src="{{ asset('storage/'.$producto->Imagen) }}" alt="">
                             @else
-                              <img class="td-image" src="{{ asset('img/no-disponible.jpg') }}" alt="">  
+                              <img class="td-image" src="{{ asset('img/no-disponible.jpg') }}" alt="">
                             @endif
                             </td>
                             <td class="text-center">{{ $producto->Nombre }}</td>
@@ -61,7 +61,7 @@
                                     <a onclick="abrirModalEditarProducto({{$producto->ProductoID}})" class="btn btn-primary rounded-circle me-3">
                                     <i class="bi bi-pencil-square"></i>
                                     </a>
-    
+
                                     <form action="{{ route('productoDestroy', ['ProductoID' => $producto->ProductoID]) }}"
                                         method="POST">
                                         @csrf
@@ -81,13 +81,13 @@
         </div>
         <div class="d-flex justify-content-center">
             @if ($productos->links())
-            {{$productos->links()}}
+                {{$productos->links()}}
             @endif
         </div>
         {{-- Inicio modal editar --}}
         @component('componentes.modal')
             @slot('modalTitulo')
-              <h1 class="modal-title fs-5 text-light" id="modalTitulo"></h1>    
+              <h1 class="modal-title fs-5 text-light" id="modalTitulo"></h1>
             @endslot
             @slot('modalBody')
                 <div class="modal-body color2">
@@ -105,7 +105,7 @@
                               <div class="alert alert-danger">{{ $message }}</div>
                             @enderror --}}
                           </div>
-          
+
                           <div class="col-md-2 ms-4">
                             <label for="cantidad" class="form-label text-light">Cantidad(*)</label>
                             <input type="number" class="form-control  @error('cantidad') is-invalid @enderror" id="cantidad" required name="cantidad" min="0">
@@ -113,16 +113,16 @@
                               <div class="alert alert-danger">{{ $message }}</div>
                             @enderror --}}
                           </div>
-          
+
                           <div class="col-md-2 ms-4">
                             <label for="precio" class="form-label text-light">Precio(*)</label>
                             <input type="number" class="form-control  @error('precio') is-invalid @enderror" id="precio" min="0" name="precio" required>
                             {{-- @error('precio')
-                              <div class="alert alert-danger">{{ $message }}</div>    
+                              <div class="alert alert-danger">{{ $message }}</div>
                             @enderror --}}
                           </div>
                         </div>
-          
+
                         <div class="input-group mt-3">
                           <div class="col-md-3">
                             <label for="categoriaID" class="form-label text-light">Categorias(*)</label>
@@ -137,7 +137,7 @@
                               <div class="alert alert-danger">{{ $message }}</div>
                             @enderror --}}
                           </div>
-          
+
                           <div class="col-md-3 ms-4 ">
                             <label for="importado" class="form-label text-light">Sub Categoria</label>
                             <select class="form-select @error('importado') is-invalid @enderror" aria-label="Disabled select example" id="selectimportado" name="importado" disabled>
@@ -150,7 +150,7 @@
                               @enderror --}}
                           </div>
                         </div>
-        
+
                         <div class="input-group mt-3">
                           <div class="col-md-8">
                             <label for="descripcion" class="form-label text-light">Descripcion</label>
@@ -178,7 +178,7 @@
                 <span class="visually-hidden"></span>
               </div>
             @endslot
-        @endcomponent      
+        @endcomponent
   </div>
 @endsection
 @section('js_footer')
