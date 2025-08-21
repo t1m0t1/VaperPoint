@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('Cliente', function (Blueprint $table) {
             $table->id('ClienteID');
-            $table->string('Nomrbe')->nullable();
+            $table->string('Nombre')->nullable();
             $table->string('Apellido')->nullable();
             $table->string('DNI')->nullable();
             $table->timestamps();
