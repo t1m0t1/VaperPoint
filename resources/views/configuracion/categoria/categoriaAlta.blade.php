@@ -6,7 +6,7 @@
           <h5 class="text-start text-light m-1">Alta de Categoria</h5>
         </div>
 
-        <form method="POST" action="{{route('categoriaStore')}}" class="row g-3 needs-validation" novalidate>
+        <form method="POST" action="{{route('generarCategoria')}}" class="row g-3 needs-validation" novalidate>
             @csrf
             <div class="col-md-3">
               <label for="Nombre" class="form-label text-light">Nombre</label>

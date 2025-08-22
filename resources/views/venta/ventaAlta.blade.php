@@ -19,7 +19,14 @@
                     </select>
                 </div>
                 <div class="d-flex justify-content-between mt-3">
-                    <button class="col-5 btn btn-success text-light text-center">Seleccionar cliente</button>
+                    <div class="col-6">
+                        <select class="form-control" name="selectorCliente" id="selectorCliente">
+                            <option value="">Seleccione un cliente</option>
+                            @foreach ($clientes as $cliente)
+                                <option value="{{$cliente->ClienteID}}">{{$cliente->Nombre}} {{$cliente->Apellido}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <button class="col-5 btn btn-success text-light text-center">Agregar descuento</button>
                 </div>
             </div>
@@ -34,7 +41,7 @@
                     <input type="text" name="descuento" value="{{old('descuento')}}" hidden>
                     <input type="number" id="montoTotalJS" name="montoTotal" value="{{old('montoTotal')}}" hidden>
                 </form>
-                 <!-- Contenedor de la tabla -->
+            <!-- Inicio Contenedor de la tabla -->
                 <div class="table-responsive flex-grow-1 overflow-auto mx-5 h-100 bg-dark">
                     <table class="table table-dark table-hover">
                         <thead class="table-dark text-center">
@@ -50,11 +57,12 @@
                         </tbody>
                         <div class="col-12 text-center">
                             @error('montoTotal')
-                            <span class="text-danger">{{$message}}</span>
+                                <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
                     </table>
                 </div>
+            <!-- FinContenedor de la tabla -->
 
                 <div class="d-flex justify-content-between mx-5 px-5 pb-2 bg-dark">
                     <span class="text-light fs-4 ">Total</span>

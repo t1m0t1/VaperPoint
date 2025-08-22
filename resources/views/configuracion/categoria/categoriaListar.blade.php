@@ -7,7 +7,7 @@
           </div>
 
           <div class="d-grid d-md-flex justify-content-md-end mb-3">
-            <a href="{{route('categoriaCreate')}}" class="btn btn-success bi bi-plus"> Nueva Categoria</a>
+            <a href="{{route('altaCategoria')}}" class="btn btn-success bi bi-plus"> Nueva Categoria</a>
         </div>
         <div class="table-responsive-lg">
             <table class="table table-bordered  table-primary table-hover">
@@ -25,9 +25,9 @@
                         </td>
                         <td class="text-center">
                             <div class="d-flex justify-content-center">
-                                <a href="{{route('categoriaEdit' , ['CategoriaID' => $categoria->CategoriaID])}}" class="btn btn-success bi bi-pencil-square me-3"></a>
+                                <a href="{{route('modificarCategoria' , ['CategoriaID' => $categoria->CategoriaID])}}" class="btn btn-success bi bi-pencil-square me-3"></a>
                                 
-                                <form action="{{route('categoriaDestroy' , ['CategoriaID' => $categoria->CategoriaID])}}" method="POST">
+                                <form action="{{route('bajaCategoria' , ['CategoriaID' => $categoria->CategoriaID])}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger bi bi-x-square"></button>

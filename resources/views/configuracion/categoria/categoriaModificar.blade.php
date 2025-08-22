@@ -6,7 +6,7 @@
           <h5 class="text-start text-light m-1">Modificar Categoria</h5>
         </div>
 
-        <form method="POST" action="{{route('categoriaUpdate' , ['CategoriaID' => $categoria->CategoriaID])}}" class="row g-3 needs-validation">
+        <form method="POST" action="{{route('guardarCategoria' , ['CategoriaID' => $categoria->CategoriaID])}}" class="row g-3 needs-validation">
             @csrf
             @method('PUT')
             <div class="col-md-3">

@@ -8,7 +8,7 @@
         </div>
       
         <div class="d-grid d-md-flex justify-content-md-end mb-3">
-            <a href="/venta/alta" class="btn btn-success bi bi-plus">Nueva Venta</a>
+            <a href="{{route('altaVenta')}}" class="btn btn-success bi bi-plus">Nueva Venta</a>
         </div>
 
       <table class="table table-bordered  table-primary table-hover">

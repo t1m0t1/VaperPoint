@@ -5,7 +5,7 @@
     </div>
   
     <div class="d-grid d-md-flex justify-content-md-end mb-3">
-        <a href="{{route('productoCreate')}}" class="btn btn-success bi bi-plus"> Nuevo Producto</a>
+        <a href="{{route('altaProducto')}}" class="btn btn-success bi bi-plus"> Nuevo Producto</a>
     </div>
 
   <table class="table table-bordered  table-primary table-hover">
@@ -40,7 +40,7 @@
                     <div class="d-flex justify-content-center">
                         <a onclick="Livewire.emit('emitMostraModalEditProducto', {{$producto->ProductoID}})" class="btn btn-success bi bi-pencil-square me-3"></a>
                         
-                        <form action="{{route('productoDestroy' , ['ProductoID' => $producto->ProductoID])}}" method="POST">
+                        <form action="{{route('bajaProducto' , ['ProductoID' => $producto->ProductoID])}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger bi bi-x-square"></button>

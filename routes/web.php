@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\RegistroController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\VentaController;
 use App\Models\Categoria;
@@ -39,67 +40,60 @@ Route::middleware('auth')->group(function(){
 
     Route::get('changePasswordform', [RegistroController::class, 'changePasswordform'])->name('changePasswordform');
     Route::post('changePasswordform', [RegistroController::class, 'changePassword'])->name('changePassword');
-
-    Route::prefix('/configuracion')->group(function () {
-        
-        Route::prefix('/producto')->group(function (){
-            Route::controller(ProductoController::class)->group(function () {
-                Route::get('/listar', 'index')->name('productoIndex');
-                Route::get('/show/{ProductoID}', 'show')->name('productoShow');
+    #Inicio de Configuracion
+        Route::prefix('/configuracion')->group(function () {
+            #Inicio de Producto
+                Route::prefix('/producto')->group(function (){
+                    Route::controller(ProductoController::class)->group(function () {
+                        Route::get('/listar', 'index')->name('listarProducto');
+                        Route::get('/mostrar/{ProductoID}', 'mostrarProducto')->name('mostrarProducto');
+                    
+                        Route::get('/alta', 'create')->name('altaProducto');
+                        Route::post('/alta', 'store')->name('generarProducto');
+                    
+                        Route::get('/modificar/{ProductoID}', 'edit')->name('modificarProducto');
+                        Route::post('/modificar/{ProductoID}', 'update')->name('guardarProducto');
+                    
+                        Route::delete('/baja/{ProductoID}', 'destroy')->name('bajaProducto');
             
-                Route::get('/alta', 'create')->name('productoCreate');
-                Route::post('/alta', 'store')->name('productoStore');
-            
-                Route::get('/modificar/{ProductoID}', 'edit')->name('productoEdit');
-                Route::post('/modificar/{ProductoID}', 'update')->name('productoUpdate');
-            
-                Route::delete('/baja/{ProductoID}', 'destroy')->name('productoDestroy');
-    
+                    });
+                });
+            #Fin de Producto
+            #Inicio de Categoria 
+                Route::prefix('/categoria')->group(function (){
+                    Route::controller(CategoriaController::class)->group(function () {
+                        Route::get('/listar', 'index')->name('listarCategoria');
+                        Route::get('/alta', 'create')->name('altaCategoria');
+                        Route::post('/alta', 'store')->name('generarCategoria');
+                        Route::get('/modificar/{CategoriaID}', 'edit')->name('modificarCategoria');
+                        Route::put('/modificar/{CategoriaID}', 'update')->name('guardarCategoria');
+                        Route::delete('/baja/{CategoriaID}', 'destroy')->name('bajaCategoria');
+                    });
+                });
+            #Fin de Categoria;
+        });
+    #Fin de Configuracion
+    #Inicio de Venta
+        Route::prefix('/venta')->group(function (){
+            Route::controller(VentaController::class)->group(function () {
+                Route::get('/listar', 'index')->name('listarVenta');
+                Route::get('/alta', 'create')->name('altaVenta');
+                Route::post('/alta', 'store')->name('generarVenta');
+            });
+    #Fin de Venta
+    #Inicio de Cliente
+            Route::prefix('/cliente')->group(function () {
+                Route::controller(ClienteController::class)->group(function (){
+                    Route::get('/listar', 'index')->name('listarCliente');
+                    Route::get('/alta', 'create')->name('altaCliente');
+                    Route::post('/alta', 'store')->name('generarCliente');
+                    Route::get('/modificar', 'edit')->name('modificarCliente');
+                    Route::put('/modificar', 'update')->name('guardarCliente');
+                    Route::put('/baja', 'destroy')->name('bajaCliente');
+                });
             });
         });
-    
-        Route::prefix('/categoria')->group(function (){
-            Route::controller(CategoriaController::class)->group(function () {
-                Route::get('/listar', 'index')->name('categoriaIndex');
-    
-                Route::get('/alta', 'create')->name('categoriaCreate');
-                Route::post('/alta', 'store')->name('categoriaStore');
-    
-                Route::get('/modificar/{CategoriaID}', 'edit')->name('categoriaEdit');
-                Route::put('/modificar/{CategoriaID}', 'update')->name('categoriaUpdate');
-    
-                Route::delete('/baja/{CategoriaID}', 'destroy')->name('categoriaDestroy');
-    
-            });
-        });
-
-    });
-
-    Route::prefix('/categoria')->group(function (){
-        Route::controller(CategoriaController::class)->group(function () {
-            Route::get('/listar', 'index')->name('categoriaIndex');
-
-            Route::get('/alta', 'create')->name('categoriaCreate');
-            Route::post('/alta', 'store')->name('categoriaStore');
-
-            Route::get('/modificar/{CategoriaID}', 'edit')->name('categoriaEdit');
-            Route::put('/modificar/{CategoriaID}', 'update')->name('categoriaUpdate');
-
-            Route::delete('/baja/{CategoriaID}', 'destroy')->name('categoriaDestroy');
-
-        });
-    });
+    #Fin de Cliente
 });
-/* Fin de Categoria */
-/* Comienzo de Venta */
-Route::prefix('/venta')->group(function (){
-    Route::controller(VentaController::class)->group(function () {
-        Route::get('/listar', 'index')->name('VentaIndex');
-        Route::get('/alta', 'nuevaVenta')->name('nuevaVenta');
-        Route::post('/alta', 'generarVenta')->name('generarVenta');
-        Route::get('/modificar', 'modificarVenta')->name('modificarVenta');
-        Route::put('/modificar', 'guardarModificacioines')->name('guardarModificacioines');
-        Route::put('/baja', 'eliminarVenta')->name('eliminarVenta');
-    });
-});
-/* Fin de Venta */
+
+

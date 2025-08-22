@@ -37,7 +37,7 @@ class CategoriaController extends Controller
         $categoria->Nombre = $validated['Nombre'];
         $categoria->save();
         
-        return redirect()->route('categoriaIndex');
+        return redirect()->route('listarCategoria');
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoriaController extends Controller
         $categoria->Nombre = $validated['Nombre'];
         $categoria->save();
         
-        return redirect()->route('categoriaIndex');
+        return redirect()->route('listarCategoria');
     }
 
     /**
@@ -74,6 +74,6 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::find($categoriaID);
         $categoria -> delete();
-        return redirect()->route('categoriaIndex');
+        return redirect()->route('listarCategoria');
     }
 }

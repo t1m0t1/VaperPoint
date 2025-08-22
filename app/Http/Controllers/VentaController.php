@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use App\Models\Producto;
 use App\Models\Venta;
 use App\Models\VentaHistorico;
@@ -19,13 +20,16 @@ class VentaController extends Controller
         return view('venta.ventaListar', ["ventas" => $ventas]);
     }
     
-    public function nuevaVenta(){
+    public function create(){
         $productos = Producto::select(['ProductoID', 'Nombre', 'Cantidad', 'CategoriaID', 'Imagen', 'Precio'])->where('Cantidad','>', 0)->orderBy("Nombre")->with('categoria')->get();
-
-        return view('venta.ventaAlta', ["productos" => $productos]);
+        $clientes = Cliente::all();
+        return view('venta.ventaAlta', [
+            "productos" => $productos,
+            "clientes" => $clientes,
+        ]);
     }
 
-    public function generarVenta(Request $request){
+    public function store(Request $request){
         $validated = $request->validate(
         [
             "productos" => 'nullable',
@@ -58,20 +62,6 @@ class VentaController extends Controller
             Log::info($ex->getTrace());
             Log::error("FIN VentaController@generarVenta");
         }
-
-    }
-
-    public function modificarVenta(Request $request, int $ventaID){
-        $venta = Venta::find($ventaID)->with('ventaDetalles');
-        $productos = Producto::orderBy("Nombre")->paginate(10);
-        return view('venta.ventaModificar', ["productos" => $productos]);
-    }
-
-    public function guardarModificacioines(Request $request){
-
-    }
-
-    public function eliminarVenta(int $ventaID){
 
     }
 

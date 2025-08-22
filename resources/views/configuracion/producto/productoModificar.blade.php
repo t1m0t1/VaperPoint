@@ -6,7 +6,7 @@
         <h5 class="text-start text-light m-1">Alta de Producto</h5>
       </div>
 
-        <form method="POST" action="{{route('productoStore')}}">
+        <form method="POST" action="{{route('generarProducto')}}">
             @csrf
             <div class="col-md-12 d-grid">
               <div class="row ms-5">
