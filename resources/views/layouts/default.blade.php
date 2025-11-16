@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Vaper Point | Home</title>
-
+        @vite(['resources/js/app.js'])
         @yield('styles')
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
