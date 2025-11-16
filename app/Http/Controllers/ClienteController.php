@@ -69,3 +69,62 @@ class ClienteController extends Controller
 
     }
 }
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
+class ClienteController extends Controller
+{
+    public function listarCliente()
+    {
+        return view('venta.cliente.clienteListar', [
+
+        ]);
+    }
+    
+    public function nuevaCliente(){
+
+        return view('venta.cliente.clienteAlta', [
+
+        ]);
+    }
+
+    public function generarCliente(Request $request){
+        $validated = $request->validate(
+        [
+        ]);
+        
+        $arrayProductos = json_decode($validated['productos']);
+        try {
+            DB::beginTransaction();
+
+            DB::commit();
+            return redirect('/venta/listar');
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            Log::error("INICIO VentaController@generarVenta");
+            Log::info($ex->getMessage());
+            Log::info($ex->getTrace());
+            Log::error("FIN VentaController@generarVenta");
+        }
+
+    }
+
+    public function modificarCliente(Request $request, int $clienteID){
+
+        return view('venta.cliente.clienteModificar', []);
+    }
+
+    public function guardarCliente(Request $request){
+
+    }
+
+    public function eliminarCliente(int $clienteID){
+
+    }
+}
