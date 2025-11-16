@@ -18,13 +18,6 @@ class ProductoController extends Controller
      */
     public function index(Request $request)
     {
-        /*
-         TODO Abel
-         - Buscador por nombre y descripcion. ✓
-         - filtros por categoria y ordenar por precio de mayor a menor .✓
-         - Nuevo y editar producto se realicen desde un modal y no redireccionando a otra vista.✓
-         */
-
         $productos = Producto::query();
         if($request->categoriaBuscada != null){
            $productos = $productos->where('CategoriaID', $request->categoriaBuscada);
@@ -58,8 +51,11 @@ class ProductoController extends Controller
 
     public function catalogo($categoriaID)
     {
-        /* TODO Mati T cambiar estetica de tarjetas*/
-        return view('catalogo.productoCatalogo', ["categoriaID" => $categoriaID]);
+        $productos = Producto::where('CategoriaID', $categoriaID)->paginate(8);
+        return view('catalogo.productoCatalogo', [
+            "categoriaID" => $categoriaID,
+            "productos" => $productos
+        ]);
     }
 
     /**

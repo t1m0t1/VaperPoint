@@ -7,8 +7,9 @@
 main, .fondo-gradient{
   background-size: cover;
   background-position: center;
-  background: rgb(5,139,203);
-  background: linear-gradient(0deg, rgb(2, 86, 126) 17%, rgb(52, 29, 153) 97%);
+  /* background: rgb(5,139,203); */
+  /* background: linear-gradient(0deg, rgb(2, 86, 126) 17%, rgb(52, 29, 153) 97%); */
+  height: max-content;
 }
 
 .td-image{

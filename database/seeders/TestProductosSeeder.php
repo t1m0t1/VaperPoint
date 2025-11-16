@@ -18,16 +18,17 @@ class TestProductosSeeder extends Seeder
         $productos = json_decode($json);
 
         foreach ($productos as $value) {
-
-            Producto::create([
-                "Nombre" => $value->Nombre,
-                "Cantidad" => $value->Cantidad,
-                "Imagen" => $value->Imagen,
-                "Descripcion" => $value->Descripcion,
-                "Precio" => $value->Precio,
-                "CategoriaID" => $value->CategoriaID
-            ]);
-
+            $producto = Producto::where('Nombre', $value->Nombre)->first();
+            if (!$producto) {
+                Producto::create([
+                    "Nombre" => $value->Nombre,
+                    "Cantidad" => $value->Cantidad,
+                    "Imagen" => $value->Imagen,
+                    "Descripcion" => $value->Descripcion,
+                    "Precio" => $value->Precio,
+                    "CategoriaID" => $value->CategoriaID
+                ]);
+            }
         }
                         
     }

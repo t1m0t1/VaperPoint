@@ -22,9 +22,12 @@ class CatergoriaSeeder extends Seeder
     public function run(): void
     {
         foreach (self::$categorias as $c) {
-            $categoria = new Categoria();
-            $categoria->Nombre = $c;
-            $categoria->save();            
+            $categoria = Categoria::where('Nombre', $c)->first();
+            if (!$categoria) {
+                $categoria = new Categoria();
+                $categoria->Nombre = $c;
+                $categoria->save();            
+            }
         }
     }
 }
