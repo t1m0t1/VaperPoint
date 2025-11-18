@@ -3,31 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\View\View;
 
 class ClienteController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $clientes = Cliente::orderBy('Nombre')->paginate(10);
-        return view('venta.cliente.clienteListar', [
+        return view(view: 'venta.cliente.clienteListar', data: [
             'clientes' => $clientes,
         ]);
     }
     
-    public function create(){
-        return view('venta.cliente.clienteAlta');
+    public function create(): View{
+        return view(view: 'venta.cliente.clienteAlta');
     }
 
-    public function store(Request $request){
+    public function store(Request $request): RedirectResponse{
         $validated = $request->validate(
-        [
+        rules: [
             "clienteDni" => 'required|numeric|regex:/^\d+$/|min:1|unique:Cliente,DNI',
             "clienteNombre" => 'required|string|max:100',
             "clienteApellido" => 'required|string|max:100',
-        ],[
+        ],params: [
            "clienteDni.required" => "El DNI del cliente es obligatorio.",
             "clienteDni.regex" => "El DNI del cliente solo puede contener números sin puntos ni comas.",
             "clienteDni.unique" => "El DNI del cliente ya está registrado.",
@@ -37,28 +39,29 @@ class ClienteController extends Controller
         
         try {
             // Formatear los campos para que tengan la primera letra en mayúscula
-            $clienteNombre = ucwords(strtolower(trim($validated['clienteNombre'])));
-            $clienteApellido = ucwords(strtolower(trim($validated['clienteApellido'])));
+            $clienteNombre = ucwords(string: strtolower(string: trim(string: $validated['clienteNombre'])));
+            $clienteApellido = ucwords(string: strtolower(string: trim(string: $validated['clienteApellido'])));
             $nuevoCliente = new Cliente();
             $nuevoCliente->DNI = $validated['clienteDni'];
             $nuevoCliente->Nombre = $clienteNombre;
             $nuevoCliente->Apellido = $clienteApellido;
             $nuevoCliente->save();
             
-            session()->flash('success', 'Cliente registrado correctamente.'); 
+            session()->flash(key: 'success', value: 'Cliente registrado correctamente.'); 
             return redirect()->route('listarCliente');
         } catch (\Exception $ex) {
-            Log::error("INICIO ClienteController@store");
-            Log::info($ex->getMessage());
-            Log::info($ex->getTrace());
-            Log::error("FIN ClienteController@store");
+            Log::error(message: "INICIO ClienteController@store");
+            Log::info(message: $ex->getMessage());
+            Log::info(message: $ex->getTrace());
+            Log::error(message: "FIN ClienteController@store");
+            return redirect()->route(route: 'listarCliente');
         }
 
     }
 
-    public function edit(Request $request, int $clienteID){
+    public function edit(Request $request, int $clienteID): View{
 
-        return view('venta.cliente.clienteModificar', []);
+        return view(view: 'venta.cliente.clienteModificar', data: []);
     }
 
     public function update(Request $request){

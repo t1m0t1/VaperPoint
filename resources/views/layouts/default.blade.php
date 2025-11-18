@@ -48,13 +48,66 @@
             </script>
         @endif
 </head>
+    <header>
+         <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" >
+            <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/">Vaper Point</a>
+            <button class="navbar-toggler" type="button" 
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-warning active" aria-current="page" href="#!">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#!">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#!">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#!">Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#!">Opinions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#!">Contact</a>
+                </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-warning" href="#!">
+                    <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-warning" href="#!">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-warning" href="#!">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
     <body class="fondo-gradient">
-        <main class="container d-flex align-items-center justify-content-center min-vh-100 flex-column">
-          @if(Auth::check())
-            @component('componentes.sidebar')
-            @endcomponent
-          @endif
-          @yield('contenido')
+        <main class="container d-flex align-items-center justify-content-center min-vh-100 min-vw-100 flex-column">
+            @if(Auth::check())
+                @component('componentes.sidebar')
+                @endcomponent
+            @endif
+            @yield('contenido')
         </main>
         @yield('js_footer')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
